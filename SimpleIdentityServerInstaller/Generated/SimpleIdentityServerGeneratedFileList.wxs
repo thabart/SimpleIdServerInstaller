@@ -2,18 +2,16 @@
 <Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
     <Fragment>
         <DirectoryRef Id="SIMPLEIDENTITYSERVER_INSTALLFOLDER">
-            <Directory Id="dir89A8C04EAABCCFFDEB61CCF81819ECC6" Name="SimpleIdentityServer">
-                <Directory Id="dir6E709E1AA7F3BCB682C8989B3BADD146" Name="src">
-                    <Component Id="cmpA1A53A9C0F5DD0DA710ED79A736DB3C5" Guid="*">
-                        <File Id="filE96A91761D15578B9A747A70964EA356" KeyPath="yes" Source="$(var.SimpleIdentityServerPath)\SimpleIdentityServer\src\sample.txt" />
-                    </Component>
-                </Directory>
+            <Directory Id="dir2D64081D4F1B88C0D1A1DDFFEF60DDBD" Name="SimpleIdentityServer.Startup">
+                <Component Id="cmp12CD6251058F169496912C7759DB618B" Guid="*">
+                    <File Id="filE085301B08FA3FD6D7B6DE2534A0AD90" KeyPath="yes" Source="$(var.SimpleIdentityServerPath)\SimpleIdentityServer.Startup\appsettings.json" />
+                </Component>
             </Directory>
         </DirectoryRef>
     </Fragment>
     <Fragment>
         <ComponentGroup Id="SimpleIdentityServerHeatGenerated">
-            <ComponentRef Id="cmpA1A53A9C0F5DD0DA710ED79A736DB3C5" />
+            <ComponentRef Id="cmp12CD6251058F169496912C7759DB618B" />
         </ComponentGroup>
     </Fragment>
 </Wix>

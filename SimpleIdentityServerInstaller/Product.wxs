@@ -10,6 +10,7 @@
     <MajorUpgrade DowngradeErrorMessage="!(loc.DowngradeErrorMessage)"/>
     <UIRef Id="WixUI_SimpleIdentityServer" />
     <!-- Check dotnet core -->
+    <!--
     <Property Id="DOTNETCOREVERSION">
       <RegistrySearch Id="DotnetCoreVersion"
                  Root="HKLM"
@@ -20,6 +21,7 @@
     <Condition Message="!(loc.DotnetCoreIsRequired)">
       <![CDATA[DOTNETCOREVERSION]]>
     </Condition>
+    -->
     <!-- Binaries -->
     <Binary Id="CustomActions"
             src="..\SimpleIdentityServerInstaller.CustomActions\bin\$(var.Configuration)\SimpleIdentityServerInstaller.CustomActions.CA.dll" />
@@ -56,4 +58,11 @@
       <ComponentGroupRef Id="WebSiteHeatGenerated"/>
 		</ComponentGroup>
 	</Fragment>
+
+  <Fragment>
+    <InstallExecuteSequence>
+      <Custom Action="SetForUpdateAppSettings" After="CostFinalize" />
+      <Custom Action="UpdateAppSettings" After="InstallFinalize" />
+    </InstallExecuteSequence>
+  </Fragment>
 </Wix>

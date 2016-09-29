@@ -2,7 +2,16 @@
 <WixLocalization Culture="en-us" xmlns="http://schemas.microsoft.com/wix/2006/localization">
   <String Id="DowngradeErrorMessage">A newer version of [ProductName] is already installed.</String>
   <String Id="DotnetCoreIsRequired">DOTNET CORE is required before installing [ProductName]</String>
-  <String Id="ChooseProviderDlgTitle">{\WixUI_Font_Title}Choose OpenId provider</String>
+  <String Id="ChooseProviderDlgTitle">Choose OpenId provider</String>
+  <String Id="ChooseProviderDlgHeader">{\WixUI_Font_Title}Choose OpenId provider</String>
+  <String Id="ChooseProviderDlgBannerBitmap" Overridable="yes">WixUI_Bmp_Banner</String>
   <String Id="ChooseProviderLabel">Select an OpenId provider</String>
   <String Id="ChooseProviderGroupLabel">OpenId providers</String>
+  <String Id="DatabaseDlgTitle">Configure your database connection</String>
+  <String Id="DatabaseDlgHeader">{\WixUI_Font_Title}Configure your database connection</String>
+  <String Id="DatabaseDlgBannerBitmap" Overridable="yes">WixUI_Bmp_Banner</String>
+  <String Id="DatabaseParameters">Connection parameters</String>
+  <String Id="DatabaseLogin">Login</String>
+  <String Id="DatabasePassword">Password</String>
+  <String Id="DatabaseConnectionString">Connection string</String>
 </WixLocalization>

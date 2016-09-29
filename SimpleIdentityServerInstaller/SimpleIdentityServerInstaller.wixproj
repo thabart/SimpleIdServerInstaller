@@ -23,6 +23,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Dialogs\ChooseProviderDlg.wxs" />
+    <Compile Include="Dialogs\DatabaseDlg.wxs" />
     <Compile Include="Generated\ApiGeneratedFileList.wxs" />
     <Compile Include="Generated\SimpleIdentityServerGeneratedFileList.wxs" />
     <Compile Include="Generated\SimpleIdentityServerSamplesGeneratedFileList.wxs" />
@@ -43,6 +44,7 @@
     </WixExtension>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Bitmaps\bannrbmp.bmp" />
     <Content Include="license.rtf" />
   </ItemGroup>
   <ItemGroup>

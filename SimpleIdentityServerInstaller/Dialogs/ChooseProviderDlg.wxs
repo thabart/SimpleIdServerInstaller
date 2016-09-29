@@ -2,10 +2,10 @@
 <Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
     <Fragment>
         <UI>
-            <Dialog Id="ChooseProviderDlg" Width="370" Height="270" Title="Choose OpenId provider">
+            <Dialog Id="ChooseProviderDlg" Width="370" Height="270" Title="!(loc.ChooseProviderDlgTitle)">
                 <!-- Header -->
-                <Control Id="BannerBitmap" Type="Bitmap" X="0" Y="0" Width="370" Height="44" TabSkip="no" Text="!(loc.LicenseAgreementDlgBannerBitmap)" />
-                <Control Id="Title" Type="Text" X="15" Y="6" Width="200" Height="15" Transparent="yes" NoPrefix="yes" Text="!(loc.ChooseProviderDlgTitle)" />  
+                <Control Id="BannerBitmap" Type="Bitmap" X="0" Y="0" Width="370" Height="44" TabSkip="no" Text="!(loc.ChooseProviderDlgBannerBitmap)" />
+                <Control Id="Title" Type="Text" X="15" Y="6" Width="200" Height="15" Transparent="yes" NoPrefix="yes" Text="!(loc.ChooseProviderDlgHeader)" />  
                 <Control Id="BannerLine" Type="Line" X="0" Y="44" Width="370" Height="0" />
                 <!-- Body -->
                 <Control Id="ChooseProviderLabel" Text="!(loc.ChooseProviderLabel)" X="30" Y="56" Width="148" Height="17" Type="Text" />
