@@ -9,8 +9,19 @@
 		</Feature>
     <Property Id="PROVIDER_TYPE" Value="SimpleIdentityServer" />
     <UIRef Id="WixUI_SimpleIdentityServer" />
+    <!-- Check dotnet core -->
+    <Property Id="DOTNETCOREVERSION">
+      <RegistrySearch Id="DotnetCoreVersion"
+                 Root="HKLM"
+                 Key="SOFTWARE\dotnet\Setup"
+                 Type="raw"
+                 Name="Version" />
+    </Property>
+    <Condition Message="!(loc.DotnetCoreIsRequired)">
+      <![CDATA[DOTNETCOREVERSION]]>
+    </Condition>
 	</Product>
-
+  
 	<Fragment>
 		<Directory Id="TARGETDIR" Name="SourceDir">
 			<Directory Id="ProgramFilesFolder">
