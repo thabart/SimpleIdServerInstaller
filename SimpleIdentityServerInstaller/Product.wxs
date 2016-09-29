@@ -20,7 +20,19 @@
     <Condition Message="!(loc.DotnetCoreIsRequired)">
       <![CDATA[DOTNETCOREVERSION]]>
     </Condition>
-    <!-- Check redis is installed -->
+    <!-- Binaries -->
+    <Binary Id="CustomActions"
+            src="..\SimpleIdentityServerInstaller.CustomActions\bin\$(var.Configuration)\SimpleIdentityServerInstaller.CustomActions.CA.dll" />
+    <!-- Custom actions -->
+    <CustomAction Id="SetForUpdateAppSettings"
+                  Return="check"
+                  Property="PARAMETERS"
+                  Value="install=[INSTALLFOLDER];connectionString=connectionstring" />
+    <CustomAction Id="UpdateAppSettings"
+                  Return="check"
+                  Execute="immediate"
+                  BinaryKey="CustomActions"                  
+                  DllEntry="UpdateAppSettings" />
 	</Product>
   
 	<Fragment>
