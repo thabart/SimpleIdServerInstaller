@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WixLocalization Culture="en-us" xmlns="http://schemas.microsoft.com/wix/2006/localization">
+  <String Id="DowngradeErrorMessage">A newer version of [ProductName] is already installed.</String>
   <String Id="DotnetCoreIsRequired">DOTNET CORE is required before installing [ProductName]</String>
   <String Id="ChooseProviderDlgTitle">{\WixUI_Font_Title}Choose OpenId provider</String>
   <String Id="ChooseProviderLabel">Select an OpenId provider</String>

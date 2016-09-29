@@ -2,12 +2,12 @@
 <Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
 	<Product Id="*" Name="SimpleIdentityServerInstaller" Language="1033" Version="1.0.0.0" Manufacturer="Thierry Habart" UpgradeCode="be366706-4993-48cb-bcee-fe1fd43eaa00">
 		<Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" />
-		<MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
-		<MediaTemplate />
+		<MediaTemplate EmbedCab="yes" />
 		<Feature Id="ProductFeature" Title="SimpleIdentityServerInstaller" Level="1">
 			<ComponentGroupRef Id="ProductComponents" />
 		</Feature>
     <Property Id="PROVIDER_TYPE" Value="SimpleIdentityServer" />
+    <MajorUpgrade DowngradeErrorMessage="!(loc.DowngradeErrorMessage)"/>
     <UIRef Id="WixUI_SimpleIdentityServer" />
     <!-- Check dotnet core -->
     <Property Id="DOTNETCOREVERSION">
@@ -20,6 +20,7 @@
     <Condition Message="!(loc.DotnetCoreIsRequired)">
       <![CDATA[DOTNETCOREVERSION]]>
     </Condition>
+    <!-- Check redis is installed -->
 	</Product>
   
 	<Fragment>

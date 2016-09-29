@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi"
+     xmlns:bal="http://schemas.microsoft.com/wix/BalExtension">
+	<Bundle Name="SimpleIdentityServer Full Installer" Version="1.0.0.0" Manufacturer="Thierry Habart" UpgradeCode="29669d65-ddd7-494c-807f-f625d7746759">
+    <BootstrapperApplicationRef Id="WixStandardBootstrapperApplication.RtfLicense">
+      <bal:WixStandardBootstrapperApplication LicenseFile="license.rtf" LogoFile="logo.png"/>
+    </BootstrapperApplicationRef>
+		<Chain>
+      <MsiPackage Compressed="yes" SourceFile="ThirdParties\Redis-x64-3.2.100.msi" Vital="yes" >
+        <MsiProperty Name="PORT" Value="6379" />
+        <MsiProperty Name="ADD_FIREWALL_RULE" Value="1"/>
+      </MsiPackage>
+      <!--
+      <MsiPackage Compressed="yes" SourceFile="$(var.SimpleIdentityServerInstaller.TargetPath)" Vital="yes" />
+      -->
+		</Chain>
+	</Bundle>
+</Wix>
