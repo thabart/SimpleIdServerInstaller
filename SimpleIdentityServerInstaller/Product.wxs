@@ -14,14 +14,22 @@
 	<Fragment>
 		<Directory Id="TARGETDIR" Name="SourceDir">
 			<Directory Id="ProgramFilesFolder">
-				<Directory Id="INSTALLFOLDER" Name="SimpleIdentityServerInstaller" />
+        <Directory Id="INSTALLFOLDER" Name="SimpleIdentityServer">
+          <Directory Id="API_INSTALLFOLDER" Name="Api"  />
+          <Directory Id="SIMPLEIDENTITYSERVER_INSTALLFOLDER" Name="SimpleIdentityServer" />
+          <Directory Id="SAMPLES_INSTALLFOLDER" Name="Samples" />
+          <Directory Id="WEBSITE_INSTALLFOLDER" Name="Website" />
+        </Directory>
 			</Directory>
 		</Directory>
 	</Fragment>
 
 	<Fragment>
 		<ComponentGroup Id="ProductComponents" Directory="INSTALLFOLDER">
-      
+      <ComponentGroupRef Id="ApiHeatGenerated"/>
+      <ComponentGroupRef Id="SimpleIdentityServerHeatGenerated"/>
+      <ComponentGroupRef Id="SamplesHeatGenerated"/>
+      <ComponentGroupRef Id="WebSiteHeatGenerated"/>
 		</ComponentGroup>
 	</Fragment>
 </Wix>

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+    <Fragment>
+        <DirectoryRef Id="SIMPLEIDENTITYSERVER_INSTALLFOLDER">
+            <Directory Id="dir89A8C04EAABCCFFDEB61CCF81819ECC6" Name="SimpleIdentityServer">
+                <Directory Id="dir6E709E1AA7F3BCB682C8989B3BADD146" Name="src">
+                    <Component Id="cmpA1A53A9C0F5DD0DA710ED79A736DB3C5" Guid="*">
+                        <File Id="filE96A91761D15578B9A747A70964EA356" KeyPath="yes" Source="$(var.SimpleIdentityServerPath)\SimpleIdentityServer\src\sample.txt" />
+                    </Component>
+                </Directory>
+            </Directory>
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <ComponentGroup Id="SimpleIdentityServerHeatGenerated">
+            <ComponentRef Id="cmpA1A53A9C0F5DD0DA710ED79A736DB3C5" />
+        </ComponentGroup>
+    </Fragment>
+</Wix>
