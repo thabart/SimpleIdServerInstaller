@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WixLocalization Culture="en-us" xmlns="http://schemas.microsoft.com/wix/2006/localization">
+  <String Id="ChooseProviderDlgTitle">{\WixUI_Font_Title}Choose OpenId provider</String>
+  <String Id="ChooseProviderLabel">Select an OpenId provider</String>
+  <String Id="ChooseProviderGroupLabel">OpenId providers</String>
+</WixLocalization>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+	<Product Id="*" Name="SimpleIdentityServerInstaller" Language="1033" Version="1.0.0.0" Manufacturer="Thierry Habart" UpgradeCode="be366706-4993-48cb-bcee-fe1fd43eaa00">
+		<Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" />
+		<MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
+		<MediaTemplate />
+		<Feature Id="ProductFeature" Title="SimpleIdentityServerInstaller" Level="1">
+			<ComponentGroupRef Id="ProductComponents" />
+		</Feature>
+    <Property Id="PROVIDER_TYPE" Value="SimpleIdentityServer" />
+    <UIRef Id="WixUI_SimpleIdentityServer" />
+	</Product>
+
+	<Fragment>
+		<Directory Id="TARGETDIR" Name="SourceDir">
+			<Directory Id="ProgramFilesFolder">
+				<Directory Id="INSTALLFOLDER" Name="SimpleIdentityServerInstaller" />
+			</Directory>
+		</Directory>
+	</Fragment>
+
+	<Fragment>
+		<ComponentGroup Id="ProductComponents" Directory="INSTALLFOLDER">
+      
+		</ComponentGroup>
+	</Fragment>
+</Wix>
