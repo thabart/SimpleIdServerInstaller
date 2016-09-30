@@ -2,7 +2,13 @@
 <Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
     <Fragment>
         <DirectoryRef Id="SIMPLEIDENTITYSERVER_INSTALLFOLDER">
+            <Component Id="cmp7D4C0977187F30412B93A0E9FDA5EA1D" Guid="*">
+                <File Id="fil67B53B0494758F1C381AA244A4E4193D" KeyPath="yes" Source="$(var.SimpleIdentityServerPath)\Launch-SimpleIdentityServer.cmd" />
+            </Component>
             <Directory Id="dir29A33B856614A8BD7E52A2ECF3B267C2" Name="IdentityServer4.Startup">
+                <Component Id="cmp76111F47039CFD8D07C064B46ED50DEA" Guid="*">
+                    <File Id="fil0A91E5C503BE5F341F2562AE0D487484" KeyPath="yes" Source="$(var.SimpleIdentityServerPath)\IdentityServer4.Startup\appsettings.json" />
+                </Component>
                 <Component Id="cmpC75FE4C412754AA1F1CF8898DAA0075F" Guid="*">
                     <File Id="filB5FACAB8345D74B9A6B97E41C15B4A0B" KeyPath="yes" Source="$(var.SimpleIdentityServerPath)\IdentityServer4.Startup\AutoMapper.dll" />
                 </Component>
@@ -356,6 +362,9 @@
                 </Component>
                 <Component Id="cmpA48B6C8504963DFF4710DB8BFFE685BB" Guid="*">
                     <File Id="fil7D75BF1E0E563CE56E2C030A5C7906CD" KeyPath="yes" Source="$(var.SimpleIdentityServerPath)\IdentityServer4.Startup\SimpleIdentityServer.Logging.pdb" />
+                </Component>
+                <Component Id="cmpD3C5884FF94A2FD45059902F984135C2" Guid="*">
+                    <File Id="filE51A213C2F25D40F732F529794B8BD40" KeyPath="yes" Source="$(var.SimpleIdentityServerPath)\IdentityServer4.Startup\SimpleIdServer.pfx" />
                 </Component>
                 <Component Id="cmpDEA83CC007D782784786A0E523AFE349" Guid="*">
                     <File Id="fil3E65022DF13C3C8A67A511B2AFF35FA2" KeyPath="yes" Source="$(var.SimpleIdentityServerPath)\IdentityServer4.Startup\StackExchange.Redis.StrongName.dll" />
@@ -3164,6 +3173,15 @@
                 </Directory>
             </Directory>
             <Directory Id="dir2D64081D4F1B88C0D1A1DDFFEF60DDBD" Name="SimpleIdentityServer.Startup">
+                <Component Id="cmp93E3AFDF58CBB4D532A3D87486A13DFE" Guid="*">
+                    <File Id="fil6E027A89FF05FC4CF660DD5E9AB3A753" KeyPath="yes" Source="$(var.SimpleIdentityServerPath)\SimpleIdentityServer.Startup\appsettings.azure.json" />
+                </Component>
+                <Component Id="cmp158E4FB2812EFF84100577A831B7068E" Guid="*">
+                    <File Id="fil20AF937EBC3F050706B284C6C6EC9F76" KeyPath="yes" Source="$(var.SimpleIdentityServerPath)\SimpleIdentityServer.Startup\appsettings.docker.json" />
+                </Component>
+                <Component Id="cmp12CD6251058F169496912C7759DB618B" Guid="*">
+                    <File Id="filE085301B08FA3FD6D7B6DE2534A0AD90" KeyPath="yes" Source="$(var.SimpleIdentityServerPath)\SimpleIdentityServer.Startup\appsettings.json" />
+                </Component>
                 <Component Id="cmp540EBC94A37F47349E24FAD488EF0511" Guid="*">
                     <File Id="fil0D721E60F0BD41B26A6D38B133830E85" KeyPath="yes" Source="$(var.SimpleIdentityServerPath)\SimpleIdentityServer.Startup\BouncyCastle.Crypto.dll" />
                 </Component>
@@ -3592,6 +3610,9 @@
                 </Component>
                 <Component Id="cmp84AF3DFCC0D071AAB4A88F38B1AE315D" Guid="*">
                     <File Id="filE1EA6B8B681F031753DCF16D8C3F446B" KeyPath="yes" Source="$(var.SimpleIdentityServerPath)\SimpleIdentityServer.Startup\SimpleIdentityServer.Startup.pdb" />
+                </Component>
+                <Component Id="cmpA92B347BBA0F881882D6877E272CC7E0" Guid="*">
+                    <File Id="filE1C4905D0B68C1A23CF2DFFADD97A81B" KeyPath="yes" Source="$(var.SimpleIdentityServerPath)\SimpleIdentityServer.Startup\SimpleIdServer.pfx" />
                 </Component>
                 <Component Id="cmp02AA36606786EAC75865C4048405025B" Guid="*">
                     <File Id="fil88183B53A3F32FE80DF981AE94F59A84" KeyPath="yes" Source="$(var.SimpleIdentityServerPath)\SimpleIdentityServer.Startup\sqlite3.dll" />
@@ -4358,6 +4379,8 @@
     </Fragment>
     <Fragment>
         <ComponentGroup Id="SimpleIdentityServerHeatGenerated">
+            <ComponentRef Id="cmp7D4C0977187F30412B93A0E9FDA5EA1D" />
+            <ComponentRef Id="cmp76111F47039CFD8D07C064B46ED50DEA" />
             <ComponentRef Id="cmpC75FE4C412754AA1F1CF8898DAA0075F" />
             <ComponentRef Id="cmp1B537F888C476D5382CFE5594853B22A" />
             <ComponentRef Id="cmpF35C0616F7E6692C656A3790E1A2AE6E" />
@@ -4476,6 +4499,7 @@
             <ComponentRef Id="cmp74452A9CE3007303188F841F3B184443" />
             <ComponentRef Id="cmpFA49A6B0CD0607D0C9F4524DE817E4FB" />
             <ComponentRef Id="cmpA48B6C8504963DFF4710DB8BFFE685BB" />
+            <ComponentRef Id="cmpD3C5884FF94A2FD45059902F984135C2" />
             <ComponentRef Id="cmpDEA83CC007D782784786A0E523AFE349" />
             <ComponentRef Id="cmp7B14D70E384299C7C602BA59EA9E01A4" />
             <ComponentRef Id="cmp0B7865899884E864807EF50F47DF1D40" />
@@ -5395,6 +5419,9 @@
             <ComponentRef Id="cmp593B95D7B193CAFEB2475EF6CDFF0B19" />
             <ComponentRef Id="cmp50526A617096F2E7C56F4E4444835E24" />
             <ComponentRef Id="cmpA197363E88973555F097B7E4437F3CFA" />
+            <ComponentRef Id="cmp93E3AFDF58CBB4D532A3D87486A13DFE" />
+            <ComponentRef Id="cmp158E4FB2812EFF84100577A831B7068E" />
+            <ComponentRef Id="cmp12CD6251058F169496912C7759DB618B" />
             <ComponentRef Id="cmp540EBC94A37F47349E24FAD488EF0511" />
             <ComponentRef Id="cmp08F7C61718D3EB1106B9AAE13ADEE8A2" />
             <ComponentRef Id="cmp5875658DACFC0127D046634384447A94" />
@@ -5538,6 +5565,7 @@
             <ComponentRef Id="cmp54D21A1792B2E1510525DF5DD7DCD774" />
             <ComponentRef Id="cmpC1166AE287CE1879B093BCE45CC1AAC2" />
             <ComponentRef Id="cmp84AF3DFCC0D071AAB4A88F38B1AE315D" />
+            <ComponentRef Id="cmpA92B347BBA0F881882D6877E272CC7E0" />
             <ComponentRef Id="cmp02AA36606786EAC75865C4048405025B" />
             <ComponentRef Id="cmpA60422131D450ED0C709A6D60E37CA55" />
             <ComponentRef Id="cmp52229DFF77D82C51F447C2F16148EC2A" />
