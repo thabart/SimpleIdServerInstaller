@@ -209,3 +209,6 @@ FakesAssemblies/
 SimpleIdentityServer/VNEXT/src/SimpleIdentityServer.Host/wwwroot/lib/*
 
 log-*.txt
+
+sources/
+repositories/
