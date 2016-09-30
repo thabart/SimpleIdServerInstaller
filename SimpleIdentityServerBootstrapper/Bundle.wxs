@@ -10,6 +10,10 @@
         <MsiProperty Name="PORT" Value="6379" />
         <MsiProperty Name="ADD_FIREWALL_RULE" Value="1"/>
       </MsiPackage>
+      <ExePackage Compressed="yes" SourceFile="ThirdParties\DotNetCore.1.0.1-Runtime-x86.exe" Vital="yes" InstallCondition="NOT VersionNT64" />
+      <ExePackage Compressed="yes" SourceFile="ThirdParties\DotNetCore.1.0.1-Runtime-x64.exe" Vital="yes" InstallCondition="VersionNT64" />
+      <ExePackage Compressed="yes" SourceFile="ThirdParties\DotNetCore.1.0.1-SDK.1.0.0.Preview2-003133-x86.exe" Vital="yes" InstallCondition="NOT VersionNT64" />
+      <ExePackage Compressed="yes" SourceFile="ThirdParties\DotNetCore.1.0.1-SDK.1.0.0.Preview2-003133-x64.exe" Vital="yes" InstallCondition="VersionNT64" />
       <!--
       <MsiPackage Compressed="yes" SourceFile="$(var.SimpleIdentityServerInstaller.TargetPath)" Vital="yes" />
       -->

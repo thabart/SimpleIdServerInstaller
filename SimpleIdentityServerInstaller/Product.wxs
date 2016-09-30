@@ -22,6 +22,14 @@
       <![CDATA[DOTNETCOREVERSION]]>
     </Condition>
     -->
+    <!-- Properties -->
+    <Property Id="DATABASE_SERVER" />
+    <Property Id="DATABASE_LOGIN" />
+    <Property Id="DATABASE_PASSWORD" />
+    <Property Id="DATABASE_CATALOG" />
+    <Property Id="DATABASE_WINDOWSAUTHENTICATION" Secure="yes" />
+    <Property Id="DATABASE_CONNECTION_CORRECT" Value="0" />
+    <Property Id="DATABASE_CONNECTIONSTRING" />
     <!-- Binaries -->
     <Binary Id="CustomActions"
             src="..\SimpleIdentityServerInstaller.CustomActions\bin\$(var.Configuration)\SimpleIdentityServerInstaller.CustomActions.CA.dll" />
@@ -29,12 +37,17 @@
     <CustomAction Id="SetForUpdateAppSettings"
                   Return="check"
                   Property="PARAMETERS"
-                  Value="install=[INSTALLFOLDER];connectionString=connectionstring" />
+                  Value="install=[INSTALLFOLDER];connectionString=[DATABASE_CONNECTIONSTRING]" />
     <CustomAction Id="UpdateAppSettings"
                   Return="check"
                   Execute="immediate"
                   BinaryKey="CustomActions"                  
                   DllEntry="UpdateAppSettings" />
+    <CustomAction Id="TestConnection"
+                  Return="check"
+                  Execute="immediate"
+                  BinaryKey="CustomActions"
+                  DllEntry="TestConnection" />
 	</Product>
   
 	<Fragment>
