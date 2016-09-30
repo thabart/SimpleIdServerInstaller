@@ -1,0 +1,4 @@
+[submodule "repositories/SimpleIdentityServer"]
+	path = repositories/SimpleIdentityServer
+	url = https://github.com/thabart/SimpleIdentityServer.git
+	branch = master
