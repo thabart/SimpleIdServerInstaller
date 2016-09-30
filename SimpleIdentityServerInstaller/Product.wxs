@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
 	<Product Id="*" Name="SimpleIdentityServerInstaller" Language="1033" Version="1.0.0.0" Manufacturer="Thierry Habart" UpgradeCode="be366706-4993-48cb-bcee-fe1fd43eaa00">
-		<Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" />
+		<Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" InstallPrivileges="elevated" />
 		<MediaTemplate EmbedCab="yes" />
 		<Feature Id="ProductFeature" Title="SimpleIdentityServerInstaller" Level="1">
 			<ComponentGroupRef Id="ProductComponents" />
@@ -9,20 +9,12 @@
     <Property Id="PROVIDER_TYPE" Value="SimpleIdentityServer" />
     <MajorUpgrade DowngradeErrorMessage="!(loc.DowngradeErrorMessage)"/>
     <UIRef Id="WixUI_SimpleIdentityServer" />
-    <!-- Check dotnet core -->
-    <!--
-    <Property Id="DOTNETCOREVERSION">
-      <RegistrySearch Id="DotnetCoreVersion"
-                 Root="HKLM"
-                 Key="SOFTWARE\dotnet\Setup"
-                 Type="raw"
-                 Name="Version" />
-    </Property>
-    <Condition Message="!(loc.DotnetCoreIsRequired)">
-      <![CDATA[DOTNETCOREVERSION]]>
+    <!-- Conditions -->
+    <Condition Message="Only administrator is allowed to install the application.">
+      <![CDATA[Privileged]]>
     </Condition>
-    -->
     <!-- Properties -->
+    <Property Id="MSIUSEREALADMINDETECTION" Value="1" />
     <Property Id="DATABASE_SERVER" />
     <Property Id="DATABASE_LOGIN" />
     <Property Id="DATABASE_PASSWORD" />
@@ -34,10 +26,6 @@
     <Binary Id="CustomActions"
             src="..\SimpleIdentityServerInstaller.CustomActions\bin\$(var.Configuration)\SimpleIdentityServerInstaller.CustomActions.CA.dll" />
     <!-- Custom actions -->
-    <CustomAction Id="SetForUpdateAppSettings"
-                  Return="check"
-                  Property="PARAMETERS"
-                  Value="install=[INSTALLFOLDER];connectionString=[DATABASE_CONNECTIONSTRING]" />
     <CustomAction Id="UpdateAppSettings"
                   Return="check"
                   Execute="immediate"
@@ -70,12 +58,8 @@
       <ComponentGroupRef Id="SamplesHeatGenerated"/>
       <ComponentGroupRef Id="WebSiteHeatGenerated"/>
 		</ComponentGroup>
-	</Fragment>
-
-  <Fragment>
     <InstallExecuteSequence>
-      <Custom Action="SetForUpdateAppSettings" After="CostFinalize" />
-      <Custom Action="UpdateAppSettings" After="InstallFinalize" />
+      <Custom Action="UpdateAppSettings" After="InstallFinalize">NOT Installed</Custom>
     </InstallExecuteSequence>
-  </Fragment>
+	</Fragment>
 </Wix>

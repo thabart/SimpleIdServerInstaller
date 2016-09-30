@@ -17,13 +17,11 @@ namespace SimpleIdentityServerInstaller.CustomActions
         {
             try
             {
-                System.Diagnostics.Debugger.Launch();
                 session.Log("Start to update the appsettings.json files");
-                // TODO = Replace the current path
-                var parameters = session["PARAMETERS"];
-                const string currentPath = @"c:\Project\SimpleIdServerInstaller\sources";
-                var appSettings = new string[] { Path.Combine(currentPath, @"SimpleIdentityServer\SimpleIdentityServer.Startup\appsettings.json") };
-                UpdateConnectionStrings(appSettings, session, "connectionstring");
+                var installDirectory = session["INSTALLFOLDER"];
+                var connectionString = session["DATABASE_CONNECTIONSTRING"];
+                var appSettings = new string[] { Path.Combine(installDirectory, @"SimpleIdentityServer\SimpleIdentityServer.Startup\appsettings.json") };
+                UpdateConnectionStrings(appSettings, session, connectionString);
                 session.Log("Finish to update the appsettings.json files");
             }
             catch(Exception ex)
