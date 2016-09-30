@@ -43,7 +43,11 @@
 			<Directory Id="ProgramFilesFolder">
         <Directory Id="INSTALLFOLDER" Name="SimpleIdentityServer">
           <Directory Id="API_INSTALLFOLDER" Name="Api"  />
-          <Directory Id="SIMPLEIDENTITYSERVER_INSTALLFOLDER" Name="SimpleIdentityServer" />
+          <Directory Id="SIMPLEIDENTITYSERVER_INSTALLFOLDER" Name="SimpleIdentityServer">
+            <Component>
+              <Shortcut />
+            </Component>
+          </Directory>
           <Directory Id="SAMPLES_INSTALLFOLDER" Name="Samples" />
           <Directory Id="WEBSITE_INSTALLFOLDER" Name="Website" />
         </Directory>
@@ -53,10 +57,12 @@
 
 	<Fragment>
 		<ComponentGroup Id="ProductComponents" Directory="INSTALLFOLDER">
-      <ComponentGroupRef Id="ApiHeatGenerated"/>
       <ComponentGroupRef Id="SimpleIdentityServerHeatGenerated"/>
+      <!--
+      <ComponentGroupRef Id="ApiHeatGenerated"/>
       <ComponentGroupRef Id="SamplesHeatGenerated"/>
       <ComponentGroupRef Id="WebSiteHeatGenerated"/>
+      -->
 		</ComponentGroup>
     <InstallExecuteSequence>
       <Custom Action="UpdateAppSettings" After="InstallFinalize">NOT Installed</Custom>

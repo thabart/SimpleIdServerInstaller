@@ -20,7 +20,14 @@ namespace SimpleIdentityServerInstaller.CustomActions
                 session.Log("Start to update the appsettings.json files");
                 var installDirectory = session["INSTALLFOLDER"];
                 var connectionString = session["DATABASE_CONNECTIONSTRING"];
-                var appSettings = new string[] { Path.Combine(installDirectory, @"SimpleIdentityServer\SimpleIdentityServer.Startup\appsettings.json") };
+                var appSettings = new string[] {
+                    Path.Combine(installDirectory, @"SimpleIdentityServer\SimpleIdentityServer.Startup\appsettings.json"),
+                    Path.Combine(installDirectory, @"SimpleIdentityServer\SimpleIdentityServer.Uma.Host\appsettings.json"),
+                    Path.Combine(installDirectory, @"SimpleIdentityServer\SimpleIdentityServer.Manager.Host.Startup\appsettings.json"),
+                    Path.Combine(installDirectory, @"SimpleIdentityServer\SimpleIdentityServer.Configuration.Startup\appsettings.json"),
+                    Path.Combine(installDirectory, @"SimpleIdentityServer\IdentityServer4.Startup\appsettings.json"),
+                    Path.Combine(installDirectory, @"SimpleIdentityServer\SimpleIdentityServer.IdentityServer.Manager.Startup\appsettings.json")
+                };
                 UpdateConnectionStrings(appSettings, session, connectionString);
                 session.Log("Finish to update the appsettings.json files");
             }

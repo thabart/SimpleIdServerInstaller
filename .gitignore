@@ -210,5 +210,5 @@ SimpleIdentityServer/VNEXT/src/SimpleIdentityServer.Host/wwwroot/lib/*
 
 log-*.txt
 
-sources/
+sources/SimpleIdentityServer/
 repositories/

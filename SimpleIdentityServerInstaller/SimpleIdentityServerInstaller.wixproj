@@ -24,10 +24,7 @@
   <ItemGroup>
     <Compile Include="Dialogs\ChooseProviderDlg.wxs" />
     <Compile Include="Dialogs\DatabaseDlg.wxs" />
-    <Compile Include="Generated\ApiGeneratedFileList.wxs" />
     <Compile Include="Generated\SimpleIdentityServerGeneratedFileList.wxs" />
-    <Compile Include="Generated\SimpleIdentityServerSamplesGeneratedFileList.wxs" />
-    <Compile Include="Generated\WebSiteGeneratedFileList.wxs" />
     <Compile Include="Product.wxs" />
     <Compile Include="WixUI_SimpleIdentityServer.wxs" />
   </ItemGroup>
@@ -62,10 +59,12 @@
   </ItemGroup>
   <Import Project="$(WixTargetsPath)" />
   <Target Name="BeforeBuild">
-    <HeatDirectory OutputFile="Generated\SimpleIdentityServerGeneratedFileList.wxs" Directory="..\sources\SimpleIdentityServer" ComponentGroupName="SimpleIdentityServerHeatGenerated" DirectoryRefId="SIMPLEIDENTITYSERVER_INSTALLFOLDER" AutogenerateGuids="true" ToolPath="$(WixToolPath)" SuppressFragments="true" SuppressRegistry="true" SuppressRootDirectory="true" PreprocessorVariable="var.SimpleIdentityServerPath" />
+    <HeatDirectory Directory="..\sources\SimpleIdentityServer" OutputFile="Generated\SimpleIdentityServerGeneratedFileList.wxs" ComponentGroupName="SimpleIdentityServerHeatGenerated" DirectoryRefId="SIMPLEIDENTITYSERVER_INSTALLFOLDER" AutogenerateGuids="true" ToolPath="$(WixToolPath)" SuppressFragments="true" SuppressRegistry="true" SuppressRootDirectory="true" PreprocessorVariable="var.SimpleIdentityServerPath" />
+    <!--
     <HeatDirectory Directory="..\sources\SimpleIdentityServer.Samples" OutputFile="Generated\SimpleIdentityServerSamplesGeneratedFileList.wxs" ComponentGroupName="SamplesHeatGenerated" DirectoryRefId="SAMPLES_INSTALLFOLDER" AutogenerateGuids="true" ToolPath="$(WixToolPath)" SuppressFragments="true" SuppressRegistry="true" SuppressRootDirectory="true" PreprocessorVariable="var.SamplesPath" />
     <HeatDirectory Directory="..\sources\UmaManagerWebSite" OutputFile="Generated\WebSiteGeneratedFileList.wxs" ComponentGroupName="WebSiteHeatGenerated" DirectoryRefId="WEBSITE_INSTALLFOLDER" AutogenerateGuids="true" ToolPath="$(WixToolPath)" SuppressFragments="true" SuppressRegistry="true" SuppressRootDirectory="true" PreprocessorVariable="var.WebsitePath" />
     <HeatDirectory Directory="..\sources\UmaManagerWebSiteApi" OutputFile="Generated\ApiGeneratedFileList.wxs" ComponentGroupName="ApiHeatGenerated" DirectoryRefId="API_INSTALLFOLDER" AutogenerateGuids="true" ToolPath="$(WixToolPath)" SuppressFragments="true" SuppressRegistry="true" SuppressRootDirectory="true" PreprocessorVariable="var.ApiPath" />
+    -->
   </Target>
   <!--
 	To modify your build process, add your task inside one of the targets below and uncomment it.
