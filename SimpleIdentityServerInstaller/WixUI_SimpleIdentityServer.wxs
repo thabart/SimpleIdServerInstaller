@@ -21,10 +21,8 @@
       
       <Publish Dialog="WelcomeDlg" Control="Next" Event="NewDialog" Value="LicenseAgreementDlg">1</Publish>
       <Publish Dialog="LicenseAgreementDlg" Control="Back" Event="NewDialog" Value="WelcomeDlg">1</Publish>
-      <Publish Dialog="LicenseAgreementDlg" Control="Next" Event="NewDialog" Value="ChooseProviderDlg">1</Publish>
-      <Publish Dialog="ChooseProviderDlg" Control="Back" Event="NewDialog" Value="LicenseAgreementDlg">1</Publish>
-      <Publish Dialog="ChooseProviderDlg" Control="Next" Event="NewDialog" Value="DatabaseDlg">1</Publish>
-      <Publish Dialog="DatabaseDlg" Control="Back" Event="NewDialog" Value="ChooseProviderDlg">1</Publish>
+      <Publish Dialog="LicenseAgreementDlg" Control="Next" Event="NewDialog" Value="DatabaseDlg">1</Publish>
+      <Publish Dialog="DatabaseDlg" Control="Back" Event="NewDialog" Value="LicenseAgreementDlg">1</Publish>
       <Publish Dialog="DatabaseDlg" Control="Next" Event="EndDialog" Value="Return">1</Publish>
       
       <Publish Dialog="ExitDialog" Control="Finish" Event="EndDialog" Value="Return" Order="999">1</Publish>

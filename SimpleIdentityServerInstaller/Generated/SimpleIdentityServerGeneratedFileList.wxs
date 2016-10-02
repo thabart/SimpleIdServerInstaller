@@ -791,6 +791,12 @@
                 </Directory>
             </Directory>
             <Directory Id="dirCF72E391149935BDD449E7765C89FA34" Name="SimpleIdentityServer.Configuration.IdServer.Startup">
+                <Component Id="cmpCD2174322D7C858570911908C8C71D4C" Guid="*">
+                    <File Id="fil9EF02C9B8B00C9AFDFBFBBED54129A06" KeyPath="yes" Source="$(var.SimpleIdentityServerPath)\SimpleIdentityServer.Configuration.IdServer.Startup\appsettings.docker.json" />
+                </Component>
+                <Component Id="cmp7A9C3CFF37C5C11E74D93C7456793340" Guid="*">
+                    <File Id="fil2A56EE2451FF3D061464F0836F77A9E9" KeyPath="yes" Source="$(var.SimpleIdentityServerPath)\SimpleIdentityServer.Configuration.IdServer.Startup\appsettings.json" />
+                </Component>
                 <Component Id="cmpA570FB12682100A7D40B27DE640E1750" Guid="*">
                     <File Id="filE02D9A04ED629B0A2790E56AFABAFEEB" KeyPath="yes" Source="$(var.SimpleIdentityServerPath)\SimpleIdentityServer.Configuration.IdServer.Startup\AutoMapper.dll" />
                 </Component>
@@ -1282,11 +1288,20 @@
                 </Component>
             </Directory>
             <Directory Id="dirE5467A54534E57F648FC212BCFF587C5" Name="SimpleIdentityServer.Configuration.Startup">
+                <Component Id="cmp213EB9D1F753F9E88AB127FDE61460DC" Guid="*">
+                    <File Id="filEF332218532D753C0D31E20F75E103EB" KeyPath="yes" Source="$(var.SimpleIdentityServerPath)\SimpleIdentityServer.Configuration.Startup\appsettings.docker.json" />
+                </Component>
+                <Component Id="cmp6021692688838CE1ED03F978EB8C7B3B" Guid="*">
+                    <File Id="fil4BFFEF05871DE592ED8B54A88079F361" KeyPath="yes" Source="$(var.SimpleIdentityServerPath)\SimpleIdentityServer.Configuration.Startup\appsettings.json" />
+                </Component>
                 <Component Id="cmp2D78B6171E5672171222E392A74928CA" Guid="*">
                     <File Id="filF931819E341842EF9D18C37D5A209484" KeyPath="yes" Source="$(var.SimpleIdentityServerPath)\SimpleIdentityServer.Configuration.Startup\Elasticsearch.Net.dll" />
                 </Component>
                 <Component Id="cmp64E95E331676AF1EA2B53EF0E7E7B280" Guid="*">
                     <File Id="fil971D25F0F52812CAA69ABB6F920AD845" KeyPath="yes" Source="$(var.SimpleIdentityServerPath)\SimpleIdentityServer.Configuration.Startup\libuv.dll" />
+                </Component>
+                <Component Id="cmp8AA11EF63A6D28A255DFBCCDEA82695F" Guid="*">
+                    <File Id="filA205F87E1DE432040E0AD250E54D32B6" KeyPath="yes" Source="$(var.SimpleIdentityServerPath)\SimpleIdentityServer.Configuration.Startup\log-20161002.txt" />
                 </Component>
                 <Component Id="cmp3C48C199D62EEDDDFEC1F40A6EC5797C" Guid="*">
                     <File Id="filD35EDC02126A589E9DD68DA4FD225A94" KeyPath="yes" Source="$(var.SimpleIdentityServerPath)\SimpleIdentityServer.Configuration.Startup\Microsoft.AspNetCore.Antiforgery.dll" />
@@ -1728,6 +1743,12 @@
                 </Component>
             </Directory>
             <Directory Id="dir31771A9969687B8218344775AD221720" Name="SimpleIdentityServer.IdentityServer.Manager.Startup">
+                <Component Id="cmp538690932348F174934531CB7ADAF2DB" Guid="*">
+                    <File Id="fil11E28E7C381AFFEB5A23DCF8A8179FF6" KeyPath="yes" Source="$(var.SimpleIdentityServerPath)\SimpleIdentityServer.IdentityServer.Manager.Startup\appsettings.docker.json" />
+                </Component>
+                <Component Id="cmp859A011800BB1F7FE15DE37A839E98C1" Guid="*">
+                    <File Id="fil017E55BBEC176A4483415C0CB2FC95B3" KeyPath="yes" Source="$(var.SimpleIdentityServerPath)\SimpleIdentityServer.IdentityServer.Manager.Startup\appsettings.json" />
+                </Component>
                 <Component Id="cmpCA26D7D01B1800CEBDC4964B3DA4E38D" Guid="*">
                     <File Id="fil66635360E9C39A5B8694874B092145FB" KeyPath="yes" Source="$(var.SimpleIdentityServerPath)\SimpleIdentityServer.IdentityServer.Manager.Startup\AutoMapper.dll" />
                 </Component>
@@ -2479,6 +2500,15 @@
                 </Directory>
             </Directory>
             <Directory Id="dir2FEDD542BFC8F155A69E6A4FE078F2E2" Name="SimpleIdentityServer.Manager.Host.Startup">
+                <Component Id="cmp774E46464641905CD7110AC6B7A531F4" Guid="*">
+                    <File Id="fil7D928B3B6EED61099066EA4DE1CB81DC" KeyPath="yes" Source="$(var.SimpleIdentityServerPath)\SimpleIdentityServer.Manager.Host.Startup\appsettings.azure.json" />
+                </Component>
+                <Component Id="cmpBD3203B1F1E4DFD0456FAB556B8AFEF9" Guid="*">
+                    <File Id="filFD08F3BFF7D17EA350F9F7274BF19E9A" KeyPath="yes" Source="$(var.SimpleIdentityServerPath)\SimpleIdentityServer.Manager.Host.Startup\appsettings.docker.json" />
+                </Component>
+                <Component Id="cmp629794AC90266955883B8BE8A04F9188" Guid="*">
+                    <File Id="fil4BAB63A5F7753D6D1E85080C9FB795EB" KeyPath="yes" Source="$(var.SimpleIdentityServerPath)\SimpleIdentityServer.Manager.Host.Startup\appsettings.json" />
+                </Component>
                 <Component Id="cmp3B70266E2F841DAABC2372C740C34E17" Guid="*">
                     <File Id="fil67DC09E89B414D35E76660D9A29EFEFC" KeyPath="yes" Source="$(var.SimpleIdentityServerPath)\SimpleIdentityServer.Manager.Host.Startup\BouncyCastle.Crypto.dll" />
                 </Component>
@@ -3190,6 +3220,9 @@
                 </Component>
                 <Component Id="cmp5875658DACFC0127D046634384447A94" Guid="*">
                     <File Id="fil29BD8E88AFEA6D1FAD56DE306F7B30B2" KeyPath="yes" Source="$(var.SimpleIdentityServerPath)\SimpleIdentityServer.Startup\libuv.dll" />
+                </Component>
+                <Component Id="cmp7E72727B99E9958B69B15CFF28ED6774" Guid="*">
+                    <File Id="filB0828133053A442620B402013113C6E3" KeyPath="yes" Source="$(var.SimpleIdentityServerPath)\SimpleIdentityServer.Startup\log-20161002.txt" />
                 </Component>
                 <Component Id="cmpA6BC1F2F2869CC8C3F52FCD684751724" Guid="*">
                     <File Id="fil7A0E31C4406CEA25AA4E901B8A2B4A3D" KeyPath="yes" Source="$(var.SimpleIdentityServerPath)\SimpleIdentityServer.Startup\MailKit.dll" />
@@ -3906,6 +3939,24 @@
                 </Directory>
             </Directory>
             <Directory Id="dir9573D23F15121B60F751D439038BA620" Name="SimpleIdentityServer.Uma.Host">
+                <Component Id="cmpDA0FD52D13F525457EC5A5581F7696FA" Guid="*">
+                    <File Id="fil65FE9F12B8D03DB424C24D876E5D7DBF" KeyPath="yes" Source="$(var.SimpleIdentityServerPath)\SimpleIdentityServer.Uma.Host\appsettings.docker.json" />
+                </Component>
+                <Component Id="cmp00F8EA2D3C35079A3DFA46FFAA7F251B" Guid="*">
+                    <File Id="fil9E79154170C4837F339961D1135BECDA" KeyPath="yes" Source="$(var.SimpleIdentityServerPath)\SimpleIdentityServer.Uma.Host\appsettings.idserver.azure.json" />
+                </Component>
+                <Component Id="cmp35833984197DFFA1D5248C4B3FBD5E72" Guid="*">
+                    <File Id="filE1F0EC802B8ECFA62E2651AC004BE47F" KeyPath="yes" Source="$(var.SimpleIdentityServerPath)\SimpleIdentityServer.Uma.Host\appsettings.idserver.docker.json" />
+                </Component>
+                <Component Id="cmp5222CBD60BB58C78412441C103C25742" Guid="*">
+                    <File Id="filDB8895ACE3E15F8D89CFA10B0AEDE4B6" KeyPath="yes" Source="$(var.SimpleIdentityServerPath)\SimpleIdentityServer.Uma.Host\appsettings.idserver.json" />
+                </Component>
+                <Component Id="cmp2A56788A189B76DF28D8542FDD2CC8E5" Guid="*">
+                    <File Id="fil058B2832B7B321149BE03A6FEF0A777D" KeyPath="yes" Source="$(var.SimpleIdentityServerPath)\SimpleIdentityServer.Uma.Host\appsettings.idserver_docker.json" />
+                </Component>
+                <Component Id="cmp49E2A48A2EEA2DF34BEB438CD7AFB321" Guid="*">
+                    <File Id="fil8A551C2222AD5092B7D86822FDB99CCD" KeyPath="yes" Source="$(var.SimpleIdentityServerPath)\SimpleIdentityServer.Uma.Host\appsettings.json" />
+                </Component>
                 <Component Id="cmpAE419E381FFD6707B88313E3963C9F74" Guid="*">
                     <File Id="fil55983D409D918C57EDA9D6622287890A" KeyPath="yes" Source="$(var.SimpleIdentityServerPath)\SimpleIdentityServer.Uma.Host\Elasticsearch.Net.dll" />
                 </Component>
@@ -4269,6 +4320,9 @@
                 <Component Id="cmpEDE48F1A93D97351D25117B43759FC23" Guid="*">
                     <File Id="fil040C0D000C0A7DA4FE073F1B4EDA76F5" KeyPath="yes" Source="$(var.SimpleIdentityServerPath)\SimpleIdentityServer.Uma.Host\SimpleIdentityServer.Uma.Host.pdb" />
                 </Component>
+                <Component Id="cmpF986D4CD661513D19B5FF4236CC6C8CA" Guid="*">
+                    <File Id="fil37F2631AFF921BB432AC13DF66A8D723" KeyPath="yes" Source="$(var.SimpleIdentityServerPath)\SimpleIdentityServer.Uma.Host\SimpleIdServer.pfx" />
+                </Component>
                 <Component Id="cmp1C9DB19332F47F332049DC75E548703C" Guid="*">
                     <File Id="filC385D9FD74DA0B9807772348C033DF2D" KeyPath="yes" Source="$(var.SimpleIdentityServerPath)\SimpleIdentityServer.Uma.Host\sqlite3.dll" />
                 </Component>
@@ -4629,6 +4683,8 @@
             <ComponentRef Id="cmpBE801285BE46A21C2688308E40EAE533" />
             <ComponentRef Id="cmpCF354971AEFE72E699330F46A3748070" />
             <ComponentRef Id="cmpC05B5DC75ACD4744F20E57FC8DC31EBA" />
+            <ComponentRef Id="cmpCD2174322D7C858570911908C8C71D4C" />
+            <ComponentRef Id="cmp7A9C3CFF37C5C11E74D93C7456793340" />
             <ComponentRef Id="cmpA570FB12682100A7D40B27DE640E1750" />
             <ComponentRef Id="cmp288807BC8DC0471E37EEE57C313714A2" />
             <ComponentRef Id="cmp7CA51D654DEE6F46C4C53AF9EA0275EC" />
@@ -4792,8 +4848,11 @@
             <ComponentRef Id="cmp41599F0A4081C572F77AB65F349C67DA" />
             <ComponentRef Id="cmp7F21EA0419476B1571697C51BE2139C4" />
             <ComponentRef Id="cmp1C76BF9EDC6D97607723F9D43C3D8D33" />
+            <ComponentRef Id="cmp213EB9D1F753F9E88AB127FDE61460DC" />
+            <ComponentRef Id="cmp6021692688838CE1ED03F978EB8C7B3B" />
             <ComponentRef Id="cmp2D78B6171E5672171222E392A74928CA" />
             <ComponentRef Id="cmp64E95E331676AF1EA2B53EF0E7E7B280" />
+            <ComponentRef Id="cmp8AA11EF63A6D28A255DFBCCDEA82695F" />
             <ComponentRef Id="cmp3C48C199D62EEDDDFEC1F40A6EC5797C" />
             <ComponentRef Id="cmpEA81008F652D8E146D1A2619E778D937" />
             <ComponentRef Id="cmp399455F07B4E84464B9B361E2ADC46A7" />
@@ -4940,6 +4999,8 @@
             <ComponentRef Id="cmp7B22C26F901009454962EFFEC87B6575" />
             <ComponentRef Id="cmp077856E41C6EE923AEC6A6C983277F95" />
             <ComponentRef Id="cmp6966A8698996C11F68493FDD971A704A" />
+            <ComponentRef Id="cmp538690932348F174934531CB7ADAF2DB" />
+            <ComponentRef Id="cmp859A011800BB1F7FE15DE37A839E98C1" />
             <ComponentRef Id="cmpCA26D7D01B1800CEBDC4964B3DA4E38D" />
             <ComponentRef Id="cmpC89BB96FB8D2CC48EB22078591C7EB8F" />
             <ComponentRef Id="cmp2183B7B62ADD8C1527CDA0A7706C8554" />
@@ -5189,6 +5250,9 @@
             <ComponentRef Id="cmpAABD2EBB737A018D93D85FE5A87182FA" />
             <ComponentRef Id="cmp111AA6291353D22D544A847AAC90DF3C" />
             <ComponentRef Id="cmp0D13AAF5968C017F898DD03FF3571578" />
+            <ComponentRef Id="cmp774E46464641905CD7110AC6B7A531F4" />
+            <ComponentRef Id="cmpBD3203B1F1E4DFD0456FAB556B8AFEF9" />
+            <ComponentRef Id="cmp629794AC90266955883B8BE8A04F9188" />
             <ComponentRef Id="cmp3B70266E2F841DAABC2372C740C34E17" />
             <ComponentRef Id="cmp82BF2C17C6F4C76604E0EECCA873FCBC" />
             <ComponentRef Id="cmpC72A457E5F54C2EDE651DB4E6D903048" />
@@ -5425,6 +5489,7 @@
             <ComponentRef Id="cmp540EBC94A37F47349E24FAD488EF0511" />
             <ComponentRef Id="cmp08F7C61718D3EB1106B9AAE13ADEE8A2" />
             <ComponentRef Id="cmp5875658DACFC0127D046634384447A94" />
+            <ComponentRef Id="cmp7E72727B99E9958B69B15CFF28ED6774" />
             <ComponentRef Id="cmpA6BC1F2F2869CC8C3F52FCD684751724" />
             <ComponentRef Id="cmpA8A780135A76ED2A5DC050E7BA962A89" />
             <ComponentRef Id="cmpBA935304A30F9AAF4D84A6064F0FBE3C" />
@@ -5662,6 +5727,12 @@
             <ComponentRef Id="cmp958CC22ABB06C5DAC20BBD23D76ACF9C" />
             <ComponentRef Id="cmp25F5658ECFD00DF1D9F7FF1D02B7BBFD" />
             <ComponentRef Id="cmp1CED7324D1B010513C4A2A132785F0B4" />
+            <ComponentRef Id="cmpDA0FD52D13F525457EC5A5581F7696FA" />
+            <ComponentRef Id="cmp00F8EA2D3C35079A3DFA46FFAA7F251B" />
+            <ComponentRef Id="cmp35833984197DFFA1D5248C4B3FBD5E72" />
+            <ComponentRef Id="cmp5222CBD60BB58C78412441C103C25742" />
+            <ComponentRef Id="cmp2A56788A189B76DF28D8542FDD2CC8E5" />
+            <ComponentRef Id="cmp49E2A48A2EEA2DF34BEB438CD7AFB321" />
             <ComponentRef Id="cmpAE419E381FFD6707B88313E3963C9F74" />
             <ComponentRef Id="cmp1DCE1A5092A26247034EE74842A4C9BE" />
             <ComponentRef Id="cmpD312C0812EE303043E233D006F3A8552" />
@@ -5783,6 +5854,7 @@
             <ComponentRef Id="cmpAFB4E013D7C37464DA96A28709F6EAB6" />
             <ComponentRef Id="cmp29597B514513A4C2801B8AFFE18EBD51" />
             <ComponentRef Id="cmpEDE48F1A93D97351D25117B43759FC23" />
+            <ComponentRef Id="cmpF986D4CD661513D19B5FF4236CC6C8CA" />
             <ComponentRef Id="cmp1C9DB19332F47F332049DC75E548703C" />
             <ComponentRef Id="cmp9CCFB57EA12654583AE925F34D5AF7FF" />
             <ComponentRef Id="cmpC218311E230A393D3AF8DFEDE931936A" />

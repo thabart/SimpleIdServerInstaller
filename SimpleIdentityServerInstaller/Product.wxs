@@ -46,7 +46,7 @@
               Name="Launch SimpleIdentityServer"
               Description="Launch SimpleIdentityServer"
               Target="[SIMPLEIDENTITYSERVER_INSTALLFOLDER]Launch-SimpleIdentityServer.cmd"
-              WorkingDirectory="SIMPLEIDENTITYSERVER_INSTALLFOLDER"/>
+              WorkingDirectory="SIMPLEIDENTITYSERVER_INSTALLFOLDER" />
           <RemoveFolder Id="DesktopFolder" On="uninstall"/>
           <RegistryValue
               Root="HKCU"
