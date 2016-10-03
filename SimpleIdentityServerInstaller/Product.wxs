@@ -15,27 +15,50 @@
     </Condition>
     <!-- Properties -->
     <Property Id="MSIUSEREALADMINDETECTION" Value="1" />
-    <Property Id="DATABASE_SERVER" />
-    <Property Id="DATABASE_LOGIN" />
-    <Property Id="DATABASE_PASSWORD" />
-    <Property Id="DATABASE_CATALOG" />
-    <Property Id="DATABASE_WINDOWSAUTHENTICATION" Secure="yes" />
-    <Property Id="DATABASE_CONNECTION_CORRECT" Value="0" />
-    <Property Id="DATABASE_CONNECTIONSTRING" />
     <!-- Binaries -->
     <Binary Id="CustomActions"
             src="..\SimpleIdentityServerInstaller.CustomActions\bin\$(var.Configuration)\SimpleIdentityServerInstaller.CustomActions.CA.dll" />
     <!-- Custom actions -->
-    <CustomAction Id="UpdateAppSettings"
+    <CustomAction Id="UpdateSimpleIdentityServerConnectionStrings"
                   Return="check"
                   Execute="immediate"
                   BinaryKey="CustomActions"                  
-                  DllEntry="UpdateAppSettings" />
-    <CustomAction Id="TestConnection"
+                  DllEntry="UpdateSimpleIdentityServerConnectionStrings" />
+    <CustomAction Id="UpdateUmaConnectionStrings"
                   Return="check"
                   Execute="immediate"
                   BinaryKey="CustomActions"
-                  DllEntry="TestConnection" />
+                  DllEntry="UpdateUmaConnectionStrings" />
+    <CustomAction Id="UpdateConfigurationConnectionStrings"
+                  Return="check"
+                  Execute="immediate"
+                  BinaryKey="CustomActions"
+                  DllEntry="UpdateConfigurationConnectionStrings" />
+    <CustomAction Id="UpdateIdServerConnectionStrings"
+                  Return="check"
+                  Execute="immediate"
+                  BinaryKey="CustomActions"
+                  DllEntry="UpdateIdServerConnectionStrings" />
+    <CustomAction Id="TestSimpleIdentityServerConnection"
+                  Return="check"
+                  Execute="immediate"
+                  BinaryKey="CustomActions"
+                  DllEntry="TestSimpleIdentityServerConnection" />
+    <CustomAction Id="TestUmaConnection"
+              Return="check"
+              Execute="immediate"
+              BinaryKey="CustomActions"
+              DllEntry="TestUmaConnection" />
+    <CustomAction Id="TestConfigurationConnection"
+          Return="check"
+          Execute="immediate"
+          BinaryKey="CustomActions"
+          DllEntry="TestConfigurationConnection" />
+    <CustomAction Id="TestIdServerConnection"
+          Return="check"
+          Execute="immediate"
+          BinaryKey="CustomActions"
+          DllEntry="TestIdServerConnection" />                  
 	</Product>
   
 	<Fragment>
@@ -81,7 +104,10 @@
       -->
 		</ComponentGroup>
     <InstallExecuteSequence>
-      <Custom Action="UpdateAppSettings" After="InstallFinalize">NOT Installed</Custom>
+      <Custom Action="UpdateSimpleIdentityServerConnectionStrings" After="InstallFinalize">NOT Installed</Custom>
+      <Custom Action="UpdateUmaConnectionStrings" After="UpdateSimpleIdentityServerConnectionStrings">NOT Installed</Custom>
+      <Custom Action="UpdateConfigurationConnectionStrings" After="UpdateUmaConnectionStrings">NOT Installed</Custom>
+      <Custom Action="UpdateIdServerConnectionStrings" After="UpdateConfigurationConnectionStrings">NOT Installed</Custom>
     </InstallExecuteSequence>
 	</Fragment>
 </Wix>

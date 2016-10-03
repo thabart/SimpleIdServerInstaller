@@ -10,7 +10,10 @@
   <String Id="ChooseProviderGroupLabel">OpenId providers</String>
   
   <String Id="DatabaseDlgTitle">[ProductName] Setup</String>
-  <String Id="DatabaseDlgHeader">{\WixUI_Font_Title}Configure your database connection</String>
+  <String Id="UmaDatabaseDlgHeader">{\WixUI_Font_Title}Configure UMA database</String>
+  <String Id="SimpleIdentityServerDatabaseDlgHeader">{\WixUI_Font_Title}Configure SimpleIdentityServer database</String>
+  <String Id="ConfigurationDatabaseDlgHeader">{\WixUI_Font_Title}Configure Configuration database</String>
+  <String Id="IdServerDatabaseDlgHeader">{\WixUI_Font_Title}Configure IdentityServer database</String>
   <String Id="DatabaseDlgBannerBitmap" Overridable="yes">WixUI_Bmp_Banner</String>
   <String Id="DatabaseParameters">Connection parameters</String>
   <String Id="DatabaseServer">Server</String>

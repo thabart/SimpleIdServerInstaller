@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+  <Fragment>
+    <UI>
+      <Property Id="DATABASE_CONFIGURATION_WINDOWSAUTHENTICATION" Value="0"></Property>
+      <Property Id="DATABASE_CONFIGURATION_CONNECTION_CORRECT" Value="0"></Property>
+      <Property Id="DATABASE_CONFIGURATION_SERVER" />
+      <Property Id="DATABASE_CONFIGURATION_LOGIN" />
+      <Property Id="DATABASE_CONFIGURATION_PASSWORD" />
+      <Property Id="DATABASE_CONFIGURATION_CATALOG" />
+      <Dialog Id="ConfigurationDatabaseDlg" Width="370" Height="270" Title="!(loc.DatabaseDlgTitle)">
+        <!-- Header -->
+        <Control Id="BannerBitmap" Type="Bitmap" X="0" Y="0" Width="370" Height="44" TabSkip="no" Text="!(loc.DatabaseDlgBannerBitmap)" />
+        <Control Id="Title" Type="Text" X="15" Y="6" Width="200" Height="15" Transparent="yes" NoPrefix="yes" Text="!(loc.ConfigurationDatabaseDlgHeader)" />
+        <Control Id="BannerLine" Type="Line" X="0" Y="44" Width="370" Height="0" />
+        <!-- Body -->
+        <Control Id="DatabaseParametersGroupBox" X="30" Y="56" Text="!(loc.DatabaseParameters)" Width="326" Height="165" Type="GroupBox" />
+
+        <Control Id="DatabaseServerLabel" Text="!(loc.DatabaseServer)" X="38" Y="75" Width="101" Height="17" Type="Text" />
+        <Control Id="DatabaseWindowsAuthenticationCheckBox" Text="!(loc.WindowsAuthentication)" X="38" Y="95" Width="150" Height="17" Type="CheckBox" CheckBoxValue="0" Property="DATABASE_CONFIGURATION_WINDOWSAUTHENTICATION" />
+        <Control Id="DatabaseLoginLabel" Text="!(loc.DatabaseLogin)" X="38" Y="115" Width="101" Height="17" Type="Text">
+          <Condition Action="disable"><![CDATA[DATABASE_CONFIGURATION_WINDOWSAUTHENTICATION = "0"]]></Condition>
+          <Condition Action="enable"><![CDATA[DATABASE_CONFIGURATION_WINDOWSAUTHENTICATION <> "0"]]></Condition>
+        </Control>
+        <Control Id="DatabasePasswordLabel" Text="!(loc.DatabasePassword)" X="38" Y="135" Width="101" Height="17" Type="Text">
+          <Condition Action="disable"><![CDATA[DATABASE_CONFIGURATION_WINDOWSAUTHENTICATION = "0"]]></Condition>
+          <Condition Action="enable"><![CDATA[DATABASE_CONFIGURATION_WINDOWSAUTHENTICATION <> "0"]]></Condition>
+        </Control>
+        <Control Id="DatabaseCatalogLabel" Text="!(loc.DatabaseCatalog)" X="38" Y="155" Width="101" Height="17" Type="Text" />
+
+        <Control Id="DatabaseServerTextBox" X="142" Y="75" Type="Edit" Height="15" Width="100" Property="DATABASE_CONFIGURATION_SERVER" />
+        <Control Id="DatabaseLoginTextBox" X="142" Y="115" Type="Edit" Height="15" Width="100" Property="DATABASE_CONFIGURATION_LOGIN">
+          <Condition Action="disable"><![CDATA[DATABASE_CONFIGURATION_WINDOWSAUTHENTICATION = "0"]]></Condition>
+          <Condition Action="enable"><![CDATA[DATABASE_CONFIGURATION_WINDOWSAUTHENTICATION <> "0"]]></Condition>
+        </Control>
+        <Control Id="DatabasePasswordTextBox" X="142" Y="135" Type="Edit" Height="15" Width="100" Property="DATABASE_CONFIGURATION_PASSWORD">
+          <Condition Action="disable"><![CDATA[DATABASE_CONFIGURATION_WINDOWSAUTHENTICATION = "0"]]></Condition>
+          <Condition Action="enable"><![CDATA[DATABASE_CONFIGURATION_WINDOWSAUTHENTICATION <> "0"]]></Condition>
+        </Control>
+        <Control Id="DatabaseConnectionStringTextBox" X="142" Y="155" Type="Edit" Height="15" Width="100" Property="DATABASE_CONFIGURATION_CATALOG" />
+
+        <Control Id="DatabaseTestConnectionButton" Type="PushButton" X="41" Y="175" Height="17" Width="70" Text="!(loc.DatabaseTestConnection)">
+          <Publish Event="DoAction" Value="TestConfigurationConnection">1</Publish>
+          <Publish Property="TEMP_VERIFIED" Value="[DATABASE_CONFIGURATION_CONNECTION_CORRECT]">1</Publish>
+          <Publish Property="DATABASE_CONFIGURATION_CONNECTION_CORRECT" Value="[TEMP_VERIFIED]" />
+        </Control>
+        <!-- Footer -->
+        <Control Id="BottomLine" Type="Line" X="0" Y="234" Width="370" Height="0" />
+        <Control Id="Back" Type="PushButton" X="180" Y="243" Width="56" Height="17" Text="!(loc.WixUIBack)" />
+        <Control Id="Next" Type="PushButton" X="236" Y="243" Width="56" Height="17" Default="yes" Text="!(loc.WixUINext)">
+          <Condition Action="disable"><![CDATA[DATABASE_CONFIGURATION_CONNECTION_CORRECT <> "1"]]></Condition>
+          <Condition Action="enable"><![CDATA[DATABASE_CONFIGURATION_CONNECTION_CORRECT = "1"]]></Condition>
+        </Control>
+        <Control Id="Cancel" Type="PushButton" X="304" Y="243" Width="56" Height="17" Cancel="yes" Text="!(loc.WixUICancel)">
+          <Publish Event="SpawnDialog" Value="CancelDlg">1</Publish>
+        </Control>
+      </Dialog>
+    </UI>
+  </Fragment>
+</Wix>

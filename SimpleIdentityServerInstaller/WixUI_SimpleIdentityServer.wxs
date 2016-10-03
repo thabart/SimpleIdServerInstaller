@@ -21,9 +21,15 @@
       
       <Publish Dialog="WelcomeDlg" Control="Next" Event="NewDialog" Value="LicenseAgreementDlg">1</Publish>
       <Publish Dialog="LicenseAgreementDlg" Control="Back" Event="NewDialog" Value="WelcomeDlg">1</Publish>
-      <Publish Dialog="LicenseAgreementDlg" Control="Next" Event="NewDialog" Value="DatabaseDlg">1</Publish>
-      <Publish Dialog="DatabaseDlg" Control="Back" Event="NewDialog" Value="LicenseAgreementDlg">1</Publish>
-      <Publish Dialog="DatabaseDlg" Control="Next" Event="EndDialog" Value="Return">1</Publish>
+      <Publish Dialog="LicenseAgreementDlg" Control="Next" Event="NewDialog" Value="SimpleIdentityServerDatabaseDlg">1</Publish>
+      <Publish Dialog="SimpleIdentityServerDatabaseDlg" Control="Back" Event="NewDialog" Value="LicenseAgreementDlg">1</Publish>
+      <Publish Dialog="SimpleIdentityServerDatabaseDlg" Control="Next" Event="NewDialog" Value="UmaDatabaseDlg">1</Publish>
+      <Publish Dialog="UmaDatabaseDlg" Control="Back" Event="NewDialog" Value="SimpleIdentityServerDatabaseDlg">1</Publish>
+      <Publish Dialog="UmaDatabaseDlg" Control="Next" Event="NewDialog" Value="ConfigurationDatabaseDlg">1</Publish>
+      <Publish Dialog="ConfigurationDatabaseDlg" Control="Back" Event="NewDialog" Value="UmaDatabaseDlg">1</Publish>
+      <Publish Dialog="ConfigurationDatabaseDlg" Control="Next" Event="NewDialog" Value="IdServerDatabaseDlg">1</Publish>
+      <Publish Dialog="IdServerDatabaseDlg" Control="Back" Event="NewDialog" Value="ConfigurationDatabaseDlg">1</Publish>
+      <Publish Dialog="IdServerDatabaseDlg" Control="Next" Event="EndDialog" Value="Return">1</Publish>
       
       <Publish Dialog="ExitDialog" Control="Finish" Event="EndDialog" Value="Return" Order="999">1</Publish>
       

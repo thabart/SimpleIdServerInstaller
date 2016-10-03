@@ -23,7 +23,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Dialogs\ChooseProviderDlg.wxs" />
-    <Compile Include="Dialogs\DatabaseDlg.wxs" />
+    <Compile Include="Dialogs\ConfigurationDatabaseDlg.wxs" />
+    <Compile Include="Dialogs\IdentityServerDatabaseDlg.wxs" />
+    <Compile Include="Dialogs\SimpleIdentityServerDatabaseDlg.wxs" />
+    <Compile Include="Dialogs\UmaDatabaseDlg.wxs" />
     <Compile Include="Generated\SimpleIdentityServerGeneratedFileList.wxs" />
     <Compile Include="Product.wxs" />
     <Compile Include="WixUI_SimpleIdentityServer.wxs" />
