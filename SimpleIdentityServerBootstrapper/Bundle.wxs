@@ -14,6 +14,9 @@
       <ExePackage Compressed="yes" SourceFile="ThirdParties\DotNetCore.1.0.1-Runtime-x64.exe" Vital="yes" InstallCondition="VersionNT64" />
       <ExePackage Compressed="yes" SourceFile="ThirdParties\DotNetCore.1.0.1-SDK.1.0.0.Preview2-003133-x86.exe" Vital="yes" InstallCondition="NOT VersionNT64" />
       <ExePackage Compressed="yes" SourceFile="ThirdParties\DotNetCore.1.0.1-SDK.1.0.0.Preview2-003133-x64.exe" Vital="yes" InstallCondition="VersionNT64" />
+      <MsiPackage Compressed="yes" SourceFile="ThirdParties\node-v4.6.0-x86.msi" Vital="yes" InstallCondition="NOT VersionNT64" />
+      <MsiPackage Compressed="yes" SourceFile="ThirdParties\node-v4.6.0-x64.msi" Vital="yes" InstallCondition="VersionNT64" />
+      <MsiPackage Compressed="yes" SourceFile="ThirdParties\mongodb-win32-i386-3.2.10-signed.msi" Vital="yes" />
       <!--
       <MsiPackage Compressed="yes" SourceFile="$(var.SimpleIdentityServerInstaller.TargetPath)" Vital="yes" />
       -->
