@@ -210,12 +210,6 @@ SimpleIdentityServer/VNEXT/src/SimpleIdentityServer.Host/wwwroot/lib/*
 
 log-*.txt
 
-sources/SimpleIdentityServer/IdentityServer4.Startup/
-sources/SimpleIdentityServer/SimpleIdentityServer.Configuration.IdServer.Startup/
-sources/SimpleIdentityServer/SimpleIdentityServer.Configuration.Startup/
-sources/SimpleIdentityServer/SimpleIdentityServer.IdentityServer.Manager.Startup/
-sources/SimpleIdentityServer/SimpleIdentityServer.Manager.Host.Startup/
-sources/SimpleIdentityServer/SimpleIdentityServer.Startup/
-sources/SimpleIdentityServer/SimpleIdentityServer.Uma.Host/
+sources/SimpleIdentityServer/
 sources/UmaManagerWebSite/dist/
 repositories/
