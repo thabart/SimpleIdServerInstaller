@@ -14,12 +14,12 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
     <OutputPath>bin\$(Configuration)\</OutputPath>
     <IntermediateOutputPath>obj\$(Configuration)\</IntermediateOutputPath>
-    <DefineConstants>SimpleIdentityServerPath=..\sources\SimpleIdentityServer;SamplesPath=..\sources\SimpleIdentityServer.Samples;WebsitePath=..\sources\UmaManagerWebSite;ApiPath=..\sources\UmaManagerWebSiteApi</DefineConstants>
+    <DefineConstants>SourcesPath=..\sources</DefineConstants>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
     <OutputPath>bin\$(Configuration)\</OutputPath>
     <IntermediateOutputPath>obj\$(Configuration)\</IntermediateOutputPath>
-    <DefineConstants>SimpleIdentityServerPath=..\sources\SimpleIdentityServer;SamplesPath=..\sources\SimpleIdentityServer.Samples;WebsitePath=..\sources\UmaManagerWebSite;ApiPath=..\sources\UmaManagerWebSiteApi</DefineConstants>
+    <DefineConstants>SourcesPath..\sources</DefineConstants>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Dialogs\ChooseProviderDlg.wxs" />
@@ -27,7 +27,7 @@
     <Compile Include="Dialogs\IdentityServerDatabaseDlg.wxs" />
     <Compile Include="Dialogs\SimpleIdentityServerDatabaseDlg.wxs" />
     <Compile Include="Dialogs\UmaDatabaseDlg.wxs" />
-    <Compile Include="Generated\SimpleIdentityServerGeneratedFileList.wxs" />
+    <Compile Include="Generated\GeneratedFileList.wxs" />
     <Compile Include="Product.wxs" />
     <Compile Include="WixUI_SimpleIdentityServer.wxs" />
   </ItemGroup>
@@ -62,7 +62,7 @@
   </ItemGroup>
   <Import Project="$(WixTargetsPath)" />
   <Target Name="BeforeBuild">
-    <HeatDirectory Directory="..\sources\SimpleIdentityServer" OutputFile="Generated\SimpleIdentityServerGeneratedFileList.wxs" ComponentGroupName="SimpleIdentityServerHeatGenerated" DirectoryRefId="SIMPLEIDENTITYSERVER_INSTALLFOLDER" AutogenerateGuids="true" ToolPath="$(WixToolPath)" SuppressFragments="true" SuppressRegistry="true" SuppressRootDirectory="true" PreprocessorVariable="var.SimpleIdentityServerPath" />
+    <HeatDirectory Directory="..\sources" OutputFile="Generated\GeneratedFileList.wxs" ComponentGroupName="HeatGenerated" DirectoryRefId="INSTALLFOLDER" AutogenerateGuids="true" ToolPath="$(WixToolPath)" SuppressFragments="true" SuppressRegistry="true" SuppressRootDirectory="true" PreprocessorVariable="var.SourcesPath" />
     <!--
     <HeatDirectory Directory="..\sources\SimpleIdentityServer.Samples" OutputFile="Generated\SimpleIdentityServerSamplesGeneratedFileList.wxs" ComponentGroupName="SamplesHeatGenerated" DirectoryRefId="SAMPLES_INSTALLFOLDER" AutogenerateGuids="true" ToolPath="$(WixToolPath)" SuppressFragments="true" SuppressRegistry="true" SuppressRootDirectory="true" PreprocessorVariable="var.SamplesPath" />
     <HeatDirectory Directory="..\sources\UmaManagerWebSite" OutputFile="Generated\WebSiteGeneratedFileList.wxs" ComponentGroupName="WebSiteHeatGenerated" DirectoryRefId="WEBSITE_INSTALLFOLDER" AutogenerateGuids="true" ToolPath="$(WixToolPath)" SuppressFragments="true" SuppressRegistry="true" SuppressRootDirectory="true" PreprocessorVariable="var.WebsitePath" />

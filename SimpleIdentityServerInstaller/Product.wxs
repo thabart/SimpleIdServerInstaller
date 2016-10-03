@@ -68,8 +68,8 @@
           <Shortcut Id="ApplicationDesktopShortcut"
               Name="Launch SimpleIdentityServer"
               Description="Launch SimpleIdentityServer"
-              Target="[SIMPLEIDENTITYSERVER_INSTALLFOLDER]Launch-SimpleIdentityServer.cmd"
-              WorkingDirectory="SIMPLEIDENTITYSERVER_INSTALLFOLDER" />
+              Target="[INSTALLFOLDER]Launch-SimpleIdentityServer.cmd"
+              WorkingDirectory="INSTALLFOLDER" />
           <RemoveFolder Id="DesktopFolder" On="uninstall"/>
           <RegistryValue
               Root="HKCU"
@@ -78,6 +78,7 @@
               Type="integer"
               Value="1"
               KeyPath="yes"/>
+          <Environment Id="IDSERVER" Name="IDSERVER" Value="[INSTALLFOLDER]" Permanent="no" Part="all" Action="set" System="no" />
         </Component>
       </Directory>
 			<Directory Id="ProgramFilesFolder">
@@ -95,13 +96,8 @@
 
 	<Fragment>
 		<ComponentGroup Id="ProductComponents" Directory="INSTALLFOLDER">
-      <ComponentGroupRef Id="SimpleIdentityServerHeatGenerated"/>
+      <ComponentGroupRef Id="HeatGenerated"/>
       <ComponentRef Id="ApplicationShortcutDesktop"/>
-      <!--
-      <ComponentGroupRef Id="ApiHeatGenerated"/>
-      <ComponentGroupRef Id="SamplesHeatGenerated"/>
-      <ComponentGroupRef Id="WebSiteHeatGenerated"/>
-      -->
 		</ComponentGroup>
     <InstallExecuteSequence>
       <Custom Action="UpdateSimpleIdentityServerConnectionStrings" After="InstallFinalize">NOT Installed</Custom>
