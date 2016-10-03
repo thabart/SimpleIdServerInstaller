@@ -1,0 +1,15 @@
+{
+  "name": "UmaWebSite-Launcher",
+  "version": "0.0.0",
+  "description": "Small description for uma-manager goes here",
+  "private": true,
+  "repository": "",
+  "engines": {
+    "node": ">= 0.10.0"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "express": "^4.13.4"
+  }
+}

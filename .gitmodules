@@ -5,3 +5,6 @@
 [submodule "repositories/UmaManagerWebSiteApi"]
 	path = repositories/UmaManagerWebSiteApi
 	url = https://github.com/thabart/UmaManagerWebSiteApi.git
+[submodule "repositories/UmaManagerWebSite"]
+	path = repositories/UmaManagerWebSite
+	url = https://github.com/thabart/UmaManagerWebSite.git

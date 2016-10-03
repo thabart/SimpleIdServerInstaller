@@ -217,4 +217,5 @@ sources/SimpleIdentityServer/SimpleIdentityServer.IdentityServer.Manager.Startup
 sources/SimpleIdentityServer/SimpleIdentityServer.Manager.Host.Startup/
 sources/SimpleIdentityServer/SimpleIdentityServer.Startup/
 sources/SimpleIdentityServer/SimpleIdentityServer.Uma.Host/
+sources/UmaManagerWebSite/dist/
 repositories/
