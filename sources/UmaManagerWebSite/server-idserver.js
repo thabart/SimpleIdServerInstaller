@@ -1,10 +1,10 @@
 var express = require('express');
 var app = express();
 
-app.use(express.static('dist'));
+app.use(express.static('distIdServer'));
 
 app.get('*', function(req, res) {
-    res.sendfile('./dist/index.html');
+    res.sendfile('./distIdServer/index.html');
 });
 
 app.listen(4200, function () {

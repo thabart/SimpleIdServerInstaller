@@ -70,6 +70,11 @@
               Description="Launch SimpleIdentityServer"
               Target="[INSTALLFOLDER]Launch-SimpleIdentityServer.cmd"
               WorkingDirectory="INSTALLFOLDER" />
+          <Shortcut Id="ApplicationIdServerDesktopShortcut"
+              Name="Launch IdentityServer"
+              Description="Launch IdentityServer"
+              Target="[INSTALLFOLDER]Launch-IdServer.cmd"
+              WorkingDirectory="INSTALLFOLDER" />
           <RemoveFolder Id="DesktopFolder" On="uninstall"/>
           <RegistryValue
               Root="HKCU"
@@ -84,11 +89,6 @@
 			<Directory Id="ProgramFilesFolder">
         <Directory Id="INSTALLFOLDER" Name="SimpleIdentityServer">
           <Directory Id="SIMPLEIDENTITYSERVER_INSTALLFOLDER" Name="SimpleIdentityServer" />
-          <!--
-          <Directory Id="API_INSTALLFOLDER" Name="Api"  />
-          <Directory Id="SAMPLES_INSTALLFOLDER" Name="Samples" />
-          <Directory Id="WEBSITE_INSTALLFOLDER" Name="Website" />
-          -->
         </Directory>
 			</Directory>
 		</Directory>

@@ -17,9 +17,7 @@
       <MsiPackage Compressed="yes" SourceFile="ThirdParties\node-v4.6.0-x86.msi" Vital="yes" InstallCondition="NOT VersionNT64" />
       <MsiPackage Compressed="yes" SourceFile="ThirdParties\node-v4.6.0-x64.msi" Vital="yes" InstallCondition="VersionNT64" />
       <MsiPackage Compressed="yes" SourceFile="ThirdParties\mongodb-win32-i386-3.2.10-signed.msi" Vital="yes" />
-      <!--
-      <MsiPackage Compressed="yes" SourceFile="$(var.SimpleIdentityServerInstaller.TargetPath)" Vital="yes" />
-      -->
+      <MsiPackage Compressed="yes" SourceFile="$(var.SimpleIdentityServerInstaller.TargetPath)" Vital="yes"  Visible="yes" DisplayInternalUI="yes"/>
 		</Chain>
 	</Bundle>
 </Wix>
