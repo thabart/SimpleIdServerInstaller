@@ -4,8 +4,8 @@ dotnet publish repositories/SimpleIdentityServer/SimpleIdentityServer/src/Identi
 dotnet publish repositories/SimpleIdentityServer/SimpleIdentityServer/src/SimpleIdentityServer.Uma.Host -f net46 -o sources/SimpleIdentityServer/SimpleIdentityServer.Uma.Host && ^
 dotnet publish repositories/SimpleIdentityServer/SimpleIdentityServer/src/SimpleIdentityServer.IdentityServer.Manager.Startup -f net46 -o sources/SimpleIdentityServer/SimpleIdentityServer.IdentityServer.Manager.Startup && ^
 dotnet publish repositories/SimpleIdentityServer/SimpleIdentityServer/src/SimpleIdentityServer.Configuration.IdServer.Startup -f net46 -o sources/SimpleIdentityServer/SimpleIdentityServer.Configuration.IdServer.Startup && ^
-npm install repositories/UmaManagerWebSiteApi --prefix repositories/UmaManagerWebSiteApi && ^
-echo f | XCOPY repositories\UmaManagerWebSiteApi sources\UmaManagerWebSiteApi\ /D /E /Y && ^
+REM npm install repositories/UmaManagerWebSiteApi --prefix repositories/UmaManagerWebSiteApi && ^
+xcopy "repositories\UmaManagerWebSiteApi" "sources\UmaManagerWebSiteApi" /s /e /y /i && ^
 cd repositories\UmaManagerWebSite && npm install && bower install && ember build && ^
-cd ..\..\ && echo f | XCOPY repositories\UmaManagerWebSite\dist sources\UmaManagerWebSite\distIdServer\ /D /E /Y && ^
+cd ..\..\ && xcopy "repositories\UmaManagerWebSite\dist" "sources\UmaManagerWebSite\distIdServer" /s /e /y /i && ^
 cd sources\UmaManagerWebSite\ && npm install && cd ..\..\

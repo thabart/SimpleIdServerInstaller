@@ -1,0 +1,17 @@
+version: 1.0.{build}
+configuration: Release
+skip_non_tags: true
+install:
+ - npm install -g bower
+ - npm install -g ember-cli
+ - git submodule update --init --recursive
+before_build:
+- cmd: nuget restore
+- cmd: build.cmd
+- cmd: build-idserver.cmd
+build:
+  project: SimpleIdentityServerInstaller.sln
+  verbosity: minimal
+artifacts:
+- path: SimpleIdentityServerBootstrapper\bin\**\SimpleIdentityServerBootstrapper.exe
+  name: SimpleIdentityServer

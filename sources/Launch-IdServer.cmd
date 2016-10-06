@@ -6,6 +6,6 @@ START cmd /k "cd %IDSERVER%SimpleIdentityServer\IdentityServer4.Startup && Ident
 START cmd /k "cd %IDSERVER%SimpleIdentityServer\SimpleIdentityServer.Uma.Host && SimpleIdentityServer.Uma.Host.exe --server.urls=https://*:5445"
 START cmd /k "cd %IDSERVER%SimpleIdentityServer\SimpleIdentityServer.IdentityServer.Manager.Startup && SimpleIdentityServer.IdentityServer.Manager.Startup.exe --server.urls=http://*:5002"
 START cmd /k "cd %IDSERVER%SimpleIdentityServer\SimpleIdentityServer.Configuration.IdServer.Startup && SimpleIdentityServer.Configuration.IdServer.Startup.exe --server.urls=http://*:5004"
-START cmd /k "cd %IDSERVER%UmaManagerWebSiteApi && node server-api.js"
+START cmd /k "cd %IDSERVER%UmaManagerWebSiteApi && npm install && node server-api.js"
 START cmd /k "cd %IDSERVER%UmaManagerWebSite && node server-idserver.js"
 echo Applications are running ...
