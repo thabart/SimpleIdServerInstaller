@@ -15,3 +15,12 @@ build:
 artifacts:
 - path: SimpleIdentityServerBootstrapper\bin\**\SimpleIdentityServerBootstrapper.exe
   name: SimpleIdentityServer
+deploy:
+- provider: GitHub
+  description: SimpleIdentityServerInstaller
+  auth_token:
+    secure: lQ8ijoj6dfshLfFWRKFUrphgt4LkIz1YduZU+S6xuF33ewz1WcySLNJURJysTF11
+  artifact: SimpleIdentityServer
+  on:
+    branch: master
+    appveyor_repo_tag: true
