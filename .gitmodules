@@ -1,0 +1,9 @@
+[submodule "repositories/SimpleIdentityServer"]
+	path = repositories/SimpleIdentityServer
+	url = https://github.com/thabart/SimpleIdentityServer.git
+[submodule "repositories/UmaManagerWebSite"]
+	path = repositories/UmaManagerWebSite
+	url = https://github.com/thabart/UmaManagerWebSite.git
+[submodule "repositories/UmaManagerWebSiteApi"]
+	path = repositories/UmaManagerWebSiteApi
+	url = https://github.com/thabart/UmaManagerWebSiteApi.git
