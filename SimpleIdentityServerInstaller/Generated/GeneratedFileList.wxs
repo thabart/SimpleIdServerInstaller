@@ -373,6 +373,9 @@
                     <Component Id="cmpE56764C5352B096AEE4E9338A921CD4A" Guid="*">
                         <File Id="fil5E9A35670B10FD769BEE1A9C69198EAA" KeyPath="yes" Source="$(var.SourcesPath)\SimpleIdentityServer\IdentityServer4.Startup\api-ms-win-service-winsvc-l1-1-0.dll" />
                     </Component>
+                    <Component Id="cmp199E4D428BAA6CB9BAE5E5B31D03AB57" Guid="*">
+                        <File Id="filCBDBC217C81076010C1CCDA55973D9C7" KeyPath="yes" Source="$(var.SourcesPath)\SimpleIdentityServer\IdentityServer4.Startup\appsettings.docker.json" />
+                    </Component>
                     <Component Id="cmpB58025D52C997EBF4176FDA3BAFF50FF" Guid="*">
                         <File Id="filF89E505E22011C8EAA2F4F3CD53D2F07" KeyPath="yes" Source="$(var.SourcesPath)\SimpleIdentityServer\IdentityServer4.Startup\appsettings.json" />
                     </Component>
@@ -735,6 +738,12 @@
                     </Component>
                     <Component Id="cmpB45E805D4883585A217B253BBF55817D" Guid="*">
                         <File Id="fil5B904E907AD34B34AA1A1E68ECE5E014" KeyPath="yes" Source="$(var.SourcesPath)\SimpleIdentityServer\IdentityServer4.Startup\Newtonsoft.Json.dll" />
+                    </Component>
+                    <Component Id="cmp6C60059D4475B02AC791A8810135ACB3" Guid="*">
+                        <File Id="fil0A37147E57BDB3AC209A92686B03894F" KeyPath="yes" Source="$(var.SourcesPath)\SimpleIdentityServer\IdentityServer4.Startup\npgsql.dll" />
+                    </Component>
+                    <Component Id="cmpB495BF66C84C775CC59C3E86F625D993" Guid="*">
+                        <File Id="fil82BB5AD8640C9FF822800928BF84897F" KeyPath="yes" Source="$(var.SourcesPath)\SimpleIdentityServer\IdentityServer4.Startup\Npgsql.EntityFrameworkCore.PostgreSQL.dll" />
                     </Component>
                     <Component Id="cmpBF2FEE25CEAC13341A874137900FED2D" Guid="*">
                         <File Id="filD6B17EF2EF180649AAFB6BC40F77ED91" KeyPath="yes" Source="$(var.SourcesPath)\SimpleIdentityServer\IdentityServer4.Startup\Remotion.Linq.dll" />
@@ -1498,6 +1507,79 @@
                             <Component Id="cmp00500528FC3F40661823ABBE1AAACB39" Guid="*">
                                 <File Id="fil28EC093EB1BE16E28A9B8AD1CECDBEC0" KeyPath="yes" Source="$(var.SourcesPath)\SimpleIdentityServer\IdentityServer4.Startup\Views\Shared\_ValidationSummary.cshtml" />
                             </Component>
+                        </Directory>
+                    </Directory>
+                    <Directory Id="dirC30C22657BFF11CA0A3151472D847099" Name="wwwroot">
+                        <Component Id="cmp15807B0167A2721C50FFC3D43B849068" Guid="*">
+                            <File Id="fil2B623EB61862A3F6BB81AEAC0817912D" KeyPath="yes" Source="$(var.SourcesPath)\SimpleIdentityServer\IdentityServer4.Startup\wwwroot\favicon.ico" />
+                        </Component>
+                        <Component Id="cmp8F40B39469CA29D2966E93F552618543" Guid="*">
+                            <File Id="filF5E16EA834EAFADCC4F56E62E6BD2577" KeyPath="yes" Source="$(var.SourcesPath)\SimpleIdentityServer\IdentityServer4.Startup\wwwroot\icon.jpg" />
+                        </Component>
+                        <Component Id="cmp57A7E2E56C54BF55D85171E7C56A7232" Guid="*">
+                            <File Id="filEC79CCE7A39F90CE05E39E392AA7C976" KeyPath="yes" Source="$(var.SourcesPath)\SimpleIdentityServer\IdentityServer4.Startup\wwwroot\icon.png" />
+                        </Component>
+                        <Directory Id="dir540A8EB32B718B25725F06D6864D03BB" Name="css">
+                            <Component Id="cmpF7F7C14FE58773C9536A9348E786FF98" Guid="*">
+                                <File Id="filDDA19B8363E7186CC25FF2D0C44C6B1F" KeyPath="yes" Source="$(var.SourcesPath)\SimpleIdentityServer\IdentityServer4.Startup\wwwroot\css\site.css" />
+                            </Component>
+                            <Component Id="cmp7B5190E022361EAC7101B3131F543931" Guid="*">
+                                <File Id="filA8FCF7955E1DE89B874C1BED8E4DB81E" KeyPath="yes" Source="$(var.SourcesPath)\SimpleIdentityServer\IdentityServer4.Startup\wwwroot\css\site.less" />
+                            </Component>
+                            <Component Id="cmpAE14BCE7355A3425ADB910D287085FB9" Guid="*">
+                                <File Id="fil31C0B3B19FDAB99415B381B0F8F76E24" KeyPath="yes" Source="$(var.SourcesPath)\SimpleIdentityServer\IdentityServer4.Startup\wwwroot\css\site.min.css" />
+                            </Component>
+                        </Directory>
+                        <Directory Id="dir2CC1EA6C4D78228B30861113AB3FAC1A" Name="lib">
+                            <Directory Id="dir03E3105D5FEC41F026FEC9EFBB947E48" Name="bootstrap">
+                                <Directory Id="dirA1AEDDE41E53AB062114F082EEFC64F9" Name="css">
+                                    <Component Id="cmp9A7A8848FEBD3C2C51DCC5C4E351114B" Guid="*">
+                                        <File Id="fil2B7A5A6246D21B7C0EF4BD422FB6BD8A" KeyPath="yes" Source="$(var.SourcesPath)\SimpleIdentityServer\IdentityServer4.Startup\wwwroot\lib\bootstrap\css\bootstrap.css" />
+                                    </Component>
+                                    <Component Id="cmpFE002C14A98C45511667E5F719393817" Guid="*">
+                                        <File Id="fil773ECE8505623AB773756400C302517A" KeyPath="yes" Source="$(var.SourcesPath)\SimpleIdentityServer\IdentityServer4.Startup\wwwroot\lib\bootstrap\css\bootstrap.css.map" />
+                                    </Component>
+                                    <Component Id="cmp557971779162960FF6F92EB0B00F2DF5" Guid="*">
+                                        <File Id="fil5939D6E2BB90CDB7E8074078F7F3B166" KeyPath="yes" Source="$(var.SourcesPath)\SimpleIdentityServer\IdentityServer4.Startup\wwwroot\lib\bootstrap\css\bootstrap.min.css" />
+                                    </Component>
+                                </Directory>
+                                <Directory Id="dirD8E61192B15FF2E8093989CB78B73CB3" Name="fonts">
+                                    <Component Id="cmp79F5DCE5967977406851E6291F3C4D8D" Guid="*">
+                                        <File Id="fil5686A7E8827985916FE6816EC3077669" KeyPath="yes" Source="$(var.SourcesPath)\SimpleIdentityServer\IdentityServer4.Startup\wwwroot\lib\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+                                    </Component>
+                                    <Component Id="cmp359BB49AD50CBFCA9553FBCDCC3BC253" Guid="*">
+                                        <File Id="fil22895A277363592BCAE610D5766456B0" KeyPath="yes" Source="$(var.SourcesPath)\SimpleIdentityServer\IdentityServer4.Startup\wwwroot\lib\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+                                    </Component>
+                                    <Component Id="cmp341598680E0A664CE5850CBA9DD63CF7" Guid="*">
+                                        <File Id="filA8894A135D4AB2AB7464FA4233E63964" KeyPath="yes" Source="$(var.SourcesPath)\SimpleIdentityServer\IdentityServer4.Startup\wwwroot\lib\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+                                    </Component>
+                                    <Component Id="cmp805BD75D4416C7903E7E262B782A63CC" Guid="*">
+                                        <File Id="filFE3A24790CD6E0FF3777903E971B8569" KeyPath="yes" Source="$(var.SourcesPath)\SimpleIdentityServer\IdentityServer4.Startup\wwwroot\lib\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+                                    </Component>
+                                    <Component Id="cmp18AAF59842BC9EFE831EA2AEBB5FBE04" Guid="*">
+                                        <File Id="fil3EB12F50BF7875D519195E1B64DFAED8" KeyPath="yes" Source="$(var.SourcesPath)\SimpleIdentityServer\IdentityServer4.Startup\wwwroot\lib\bootstrap\fonts\glyphicons-halflings-regular.woff2" />
+                                    </Component>
+                                </Directory>
+                                <Directory Id="dir3377B8CEF6292A5A86CF029D4336C397" Name="js">
+                                    <Component Id="cmp6EDF68B14BB76F60032D90043DA372D6" Guid="*">
+                                        <File Id="fil62B595128E4FF2960299B86F7A1CD61D" KeyPath="yes" Source="$(var.SourcesPath)\SimpleIdentityServer\IdentityServer4.Startup\wwwroot\lib\bootstrap\js\bootstrap.js" />
+                                    </Component>
+                                    <Component Id="cmp3CD5874FEE6AA086AF70CA6DF97050A9" Guid="*">
+                                        <File Id="fil08DFC575B2CA61334E2E6D7A72FDD5A8" KeyPath="yes" Source="$(var.SourcesPath)\SimpleIdentityServer\IdentityServer4.Startup\wwwroot\lib\bootstrap\js\bootstrap.min.js" />
+                                    </Component>
+                                </Directory>
+                            </Directory>
+                            <Directory Id="dir8AD11CB9D6B0432CACD4E52A834B094D" Name="jquery">
+                                <Component Id="cmp247EE35F636AB7DEEAF1604C61D7DA7F" Guid="*">
+                                    <File Id="fil0DCE4287935ED3674C70E462836905B2" KeyPath="yes" Source="$(var.SourcesPath)\SimpleIdentityServer\IdentityServer4.Startup\wwwroot\lib\jquery\jquery.js" />
+                                </Component>
+                                <Component Id="cmp6C1693B93A679A56AF1027241ADE756C" Guid="*">
+                                    <File Id="fil9ACE9498924763C9113CECB1E9CC217A" KeyPath="yes" Source="$(var.SourcesPath)\SimpleIdentityServer\IdentityServer4.Startup\wwwroot\lib\jquery\jquery.min.js" />
+                                </Component>
+                                <Component Id="cmp4F8F8106F727F4F08810970610E3A189" Guid="*">
+                                    <File Id="filD4B21D4AE988B81A3495FC5C086232EC" KeyPath="yes" Source="$(var.SourcesPath)\SimpleIdentityServer\IdentityServer4.Startup\wwwroot\lib\jquery\jquery.min.map" />
+                                </Component>
+                            </Directory>
                         </Directory>
                     </Directory>
                 </Directory>
@@ -2771,6 +2853,12 @@
                     </Component>
                     <Component Id="cmp36D1AF69B3724A7E3661664041A6FAA8" Guid="*">
                         <File Id="fil8B9440AA6BBC6AD6E4FB61AD05F31F26" KeyPath="yes" Source="$(var.SourcesPath)\SimpleIdentityServer\SimpleIdentityServer.IdentityServer.Manager.Startup\Newtonsoft.Json.dll" />
+                    </Component>
+                    <Component Id="cmpB71FEF10AEEA96FE0B652D7E1CF7FF2A" Guid="*">
+                        <File Id="fil66C722ADB4DFD43EC9E87F41E66DC724" KeyPath="yes" Source="$(var.SourcesPath)\SimpleIdentityServer\SimpleIdentityServer.IdentityServer.Manager.Startup\npgsql.dll" />
+                    </Component>
+                    <Component Id="cmp25FAA4FC3C54B3E387A0FD43F26D2BCD" Guid="*">
+                        <File Id="fil7860FFE08769CF43A59CB1BFC048CCDD" KeyPath="yes" Source="$(var.SourcesPath)\SimpleIdentityServer\SimpleIdentityServer.IdentityServer.Manager.Startup\Npgsql.EntityFrameworkCore.PostgreSQL.dll" />
                     </Component>
                     <Component Id="cmp25D9083862DEE5A693E13B04EFF15AEE" Guid="*">
                         <File Id="filD6590AEEDBC5B4DD85126114D70C4015" KeyPath="yes" Source="$(var.SourcesPath)\SimpleIdentityServer\SimpleIdentityServer.IdentityServer.Manager.Startup\Remotion.Linq.dll" />
@@ -31960,6 +32048,7 @@
             <ComponentRef Id="cmpBE94030358F33A095C6B4ABF66D3DEDD" />
             <ComponentRef Id="cmp77204B46B7168BA71E175B7D2BC7F9B6" />
             <ComponentRef Id="cmpE56764C5352B096AEE4E9338A921CD4A" />
+            <ComponentRef Id="cmp199E4D428BAA6CB9BAE5E5B31D03AB57" />
             <ComponentRef Id="cmpB58025D52C997EBF4176FDA3BAFF50FF" />
             <ComponentRef Id="cmpAE6C67B80DE3FADDF9995650374AA012" />
             <ComponentRef Id="cmpE065FFB9BB398EC497221593BFBB945C" />
@@ -32081,6 +32170,8 @@
             <ComponentRef Id="cmp98E90025ED0054A9DE84988B8A673F52" />
             <ComponentRef Id="cmp202E28454B704043C8831C63DF04FFF9" />
             <ComponentRef Id="cmpB45E805D4883585A217B253BBF55817D" />
+            <ComponentRef Id="cmp6C60059D4475B02AC791A8810135ACB3" />
+            <ComponentRef Id="cmpB495BF66C84C775CC59C3E86F625D993" />
             <ComponentRef Id="cmpBF2FEE25CEAC13341A874137900FED2D" />
             <ComponentRef Id="cmp22D8ACCC2609930498891F48DC25444F" />
             <ComponentRef Id="cmpDE4B97AEA821168C98DAB4A7BE0202E5" />
@@ -32331,6 +32422,25 @@
             <ComponentRef Id="cmp8C4C079F23D1B6C6D4B1D426730E0F1F" />
             <ComponentRef Id="cmp7C7921353F3B794C0DA64DF50E516124" />
             <ComponentRef Id="cmp00500528FC3F40661823ABBE1AAACB39" />
+            <ComponentRef Id="cmp15807B0167A2721C50FFC3D43B849068" />
+            <ComponentRef Id="cmp8F40B39469CA29D2966E93F552618543" />
+            <ComponentRef Id="cmp57A7E2E56C54BF55D85171E7C56A7232" />
+            <ComponentRef Id="cmpF7F7C14FE58773C9536A9348E786FF98" />
+            <ComponentRef Id="cmp7B5190E022361EAC7101B3131F543931" />
+            <ComponentRef Id="cmpAE14BCE7355A3425ADB910D287085FB9" />
+            <ComponentRef Id="cmp9A7A8848FEBD3C2C51DCC5C4E351114B" />
+            <ComponentRef Id="cmpFE002C14A98C45511667E5F719393817" />
+            <ComponentRef Id="cmp557971779162960FF6F92EB0B00F2DF5" />
+            <ComponentRef Id="cmp79F5DCE5967977406851E6291F3C4D8D" />
+            <ComponentRef Id="cmp359BB49AD50CBFCA9553FBCDCC3BC253" />
+            <ComponentRef Id="cmp341598680E0A664CE5850CBA9DD63CF7" />
+            <ComponentRef Id="cmp805BD75D4416C7903E7E262B782A63CC" />
+            <ComponentRef Id="cmp18AAF59842BC9EFE831EA2AEBB5FBE04" />
+            <ComponentRef Id="cmp6EDF68B14BB76F60032D90043DA372D6" />
+            <ComponentRef Id="cmp3CD5874FEE6AA086AF70CA6DF97050A9" />
+            <ComponentRef Id="cmp247EE35F636AB7DEEAF1604C61D7DA7F" />
+            <ComponentRef Id="cmp6C1693B93A679A56AF1027241ADE756C" />
+            <ComponentRef Id="cmp4F8F8106F727F4F08810970610E3A189" />
             <ComponentRef Id="cmp05D892CB25F973D02A9D2F3D9A3119DD" />
             <ComponentRef Id="cmp92F9322A6528F48E263257FCE195015E" />
             <ComponentRef Id="cmp6F0DE88FEA3A0E31F571F46CB5132199" />
@@ -32753,6 +32863,8 @@
             <ComponentRef Id="cmp6F83FCC158FF22E7694446F8BA3919FB" />
             <ComponentRef Id="cmpC6258766046A5E2CD86BD01C50A0995D" />
             <ComponentRef Id="cmp36D1AF69B3724A7E3661664041A6FAA8" />
+            <ComponentRef Id="cmpB71FEF10AEEA96FE0B652D7E1CF7FF2A" />
+            <ComponentRef Id="cmp25FAA4FC3C54B3E387A0FD43F26D2BCD" />
             <ComponentRef Id="cmp25D9083862DEE5A693E13B04EFF15AEE" />
             <ComponentRef Id="cmp3584D43CFCD825C7468642A933355BCC" />
             <ComponentRef Id="cmpC1A9F9FC8A9E225BC2F9DA7CD0C619F3" />
