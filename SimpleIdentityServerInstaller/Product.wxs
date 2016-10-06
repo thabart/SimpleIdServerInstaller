@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi"
+  xmlns:iis="http://schemas.microsoft.com/wix/IIsExtension">
 	<Product Id="*" Name="SimpleIdentityServerInstaller" Language="1033" Version="1.0.0.0" Manufacturer="Thierry Habart" UpgradeCode="be366706-4993-48cb-bcee-fe1fd43eaa00">
 		<Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" InstallPrivileges="elevated" />
 		<MediaTemplate EmbedCab="yes" />
@@ -18,6 +19,7 @@
     <!-- Binaries -->
     <Binary Id="CustomActions"
             src="..\SimpleIdentityServerInstaller.CustomActions\bin\$(var.Configuration)\SimpleIdentityServerInstaller.CustomActions.CA.dll" />
+    <Binary Id="Certificate.RootCA.Binary" SourceFile="LokitCA.cer" />
     <!-- Custom actions -->
     <CustomAction Id="UpdateSimpleIdentityServerConnectionStrings"
                   Return="check"
@@ -88,6 +90,18 @@
       </Directory>
 			<Directory Id="ProgramFilesFolder">
         <Directory Id="INSTALLFOLDER" Name="SimpleIdentityServer">
+          <Directory Id="CERTIFICATES" Name="Certificates">
+            <Component Id="InstallCertificate" Guid="ae8cd228-c434-4094-bc23-4fa854ad41d5">
+              <File Id="fileCertificate" KeyPath="yes" Source="LokitCA.cer" Name="LokitCA.cer" />
+              <iis:Certificate Id="Certificate.RootCA"
+                               Name="LokitCA.cer"
+                               Request="no"
+                               StoreLocation="localMachine"
+                               StoreName="root"
+                               Overwrite="yes"
+                               BinaryKey="Certificate.RootCA.Binary"/>
+            </Component>
+          </Directory>
           <Directory Id="SIMPLEIDENTITYSERVER_INSTALLFOLDER" Name="SimpleIdentityServer" />
         </Directory>
 			</Directory>
@@ -98,6 +112,7 @@
 		<ComponentGroup Id="ProductComponents" Directory="INSTALLFOLDER">
       <ComponentGroupRef Id="HeatGenerated"/>
       <ComponentRef Id="ApplicationShortcutDesktop"/>
+      <ComponentRef Id="InstallCertificate"/>
 		</ComponentGroup>
     <InstallExecuteSequence>
       <Custom Action="UpdateSimpleIdentityServerConnectionStrings" After="InstallFinalize">NOT Installed</Custom>

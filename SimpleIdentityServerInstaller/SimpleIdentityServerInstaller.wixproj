@@ -38,6 +38,10 @@
     <Folder Include="Generated" />
   </ItemGroup>
   <ItemGroup>
+    <WixExtension Include="WixIIsExtension">
+      <HintPath>$(WixExtDir)\WixIIsExtension.dll</HintPath>
+      <Name>WixIIsExtension</Name>
+    </WixExtension>
     <WixExtension Include="WixUIExtension">
       <HintPath>$(WixExtDir)\WixUIExtension.dll</HintPath>
       <Name>WixUIExtension</Name>
@@ -63,11 +67,6 @@
   <Import Project="$(WixTargetsPath)" />
   <Target Name="BeforeBuild">
     <HeatDirectory Directory="..\sources" OutputFile="Generated\GeneratedFileList.wxs" ComponentGroupName="HeatGenerated" DirectoryRefId="INSTALLFOLDER" AutogenerateGuids="true" ToolPath="$(WixToolPath)" SuppressFragments="true" SuppressRegistry="true" SuppressRootDirectory="true" PreprocessorVariable="var.SourcesPath" />
-    <!--
-    <HeatDirectory Directory="..\sources\SimpleIdentityServer.Samples" OutputFile="Generated\SimpleIdentityServerSamplesGeneratedFileList.wxs" ComponentGroupName="SamplesHeatGenerated" DirectoryRefId="SAMPLES_INSTALLFOLDER" AutogenerateGuids="true" ToolPath="$(WixToolPath)" SuppressFragments="true" SuppressRegistry="true" SuppressRootDirectory="true" PreprocessorVariable="var.SamplesPath" />
-    <HeatDirectory Directory="..\sources\UmaManagerWebSite" OutputFile="Generated\WebSiteGeneratedFileList.wxs" ComponentGroupName="WebSiteHeatGenerated" DirectoryRefId="WEBSITE_INSTALLFOLDER" AutogenerateGuids="true" ToolPath="$(WixToolPath)" SuppressFragments="true" SuppressRegistry="true" SuppressRootDirectory="true" PreprocessorVariable="var.WebsitePath" />
-    <HeatDirectory Directory="..\sources\UmaManagerWebSiteApi" OutputFile="Generated\ApiGeneratedFileList.wxs" ComponentGroupName="ApiHeatGenerated" DirectoryRefId="API_INSTALLFOLDER" AutogenerateGuids="true" ToolPath="$(WixToolPath)" SuppressFragments="true" SuppressRegistry="true" SuppressRootDirectory="true" PreprocessorVariable="var.ApiPath" />
-    -->
   </Target>
   <!--
 	To modify your build process, add your task inside one of the targets below and uncomment it.
